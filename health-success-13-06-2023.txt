@@ -1,0 +1,3554 @@
+itseelm-lx42193.ikea.com
+---------------------
+CNS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "CNS" : RUNNING 
+Current state of "CNS1" : RUNNING 
+Current state of "WLS_FORMS" : RUNNING 
+Current state of "WLS_FORMS1" : RUNNING 
+Current state of "WLS_REPORTS" : RUNNING 
+Current state of "WLS_REPORTS1" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42191.ikea.com
+---------------------
+CNS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "CNS" : RUNNING 
+Current state of "CNS1" : RUNNING 
+Current state of "WLS_FORMS" : RUNNING 
+Current state of "WLS_FORMS1" : RUNNING 
+Current state of "WLS_REPORTS" : RUNNING 
+Current state of "WLS_REPORTS1" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41913.ikea.com
+---------------------
+ITM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "spatial_1" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41910.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41910" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41912.ikea.com
+---------------------
+ITM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "bi_server1" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41908.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41908" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41909.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41909" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41911.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41911" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41906.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41906" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41905.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41905" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41904.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41904" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41898.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41898" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41907.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41907" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41901.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41901" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41899.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41899" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41902.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41902" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41900.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41900" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41903.ikea.com
+---------------------
+ITM Application
+
+Current state of "gc3webapp-itseelm-lx41903" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41914.ikea.com
+---------------------
+ITM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "bi_server1" : RUNNING 
+Current state of "AdminServer" : RUNNING 
+Current state of "ODI_server1" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41916.ikea.com
+---------------------
+ITM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "itmtools_1" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41915.ikea.com
+---------------------
+ITM Application
+
+Current state of evolv-12c:RUNNING
+---------------------------------------------------------
+
+itseelm-lx42115.ikea.com
+---------------------
+SDE Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "sde9archive_ucm" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42123.ikea.com
+---------------------
+SDE Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "capture_server1" : RUNNING 
+Current state of "capture_server2" : RUNNING 
+Current state of "capture_server3" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42122.ikea.com
+---------------------
+SDE Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "IBR_server1" : RUNNING 
+Current state of "IBR_server2" : RUNNING 
+Current state of "IBR_server3" : RUNNING 
+Current state of "UCM_server1" : RUNNING 
+Current state of "UCM_server2" : RUNNING 
+Current state of "UCM_server3" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42119.ikea.com
+---------------------
+SDE Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "soa_server1" : RUNNING 
+Current state of "soa_server2" : RUNNING 
+Current state of "soa_server3" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42116.ikea.com
+---------------------
+SDE Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "bi_server1" : RUNNING 
+Current state of "bi_server2" : RUNNING 
+Current state of "bi_server3" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41140.ikea.com
+---------------------
+CAIS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_FORMS" : RUNNING 
+Current state of "WLS_FORMS1" : RUNNING 
+Current state of "WLS_REPORTS" : RUNNING 
+Current state of "WLS_REPORTS1" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41969.ikea.com
+---------------------
+OM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "OM1_server" : RUNNING 
+Current state of "OM2_server" : RUNNING 
+Current state of "REPORT_server" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41971.ikea.com
+---------------------
+OM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "OM1_server" : RUNNING 
+Current state of "OM2_server" : RUNNING 
+Current state of "REPORT_server" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42029.ikea.com
+---------------------
+OM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "OM1_server" : RUNNING 
+Current state of "OM2_server" : RUNNING 
+Current state of "REPORT_server" : RUNNING
+---------------------------------------------------------
+
+itcnchn-lx4014.ikea.com
+---------------------
+OM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "OM1_server" : RUNNING 
+Current state of "OM2_server" : RUNNING 
+Current state of "REPORT_server" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42030.ikea.com
+---------------------
+OM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "OM1_server" : RUNNING 
+Current state of "OM2_server" : RUNNING 
+Current state of "REPORT_server" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41972.ikea.com
+---------------------
+OM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "OM1_server" : RUNNING 
+Current state of "OM2_server" : RUNNING 
+Current state of "REPORT_server" : RUNNING
+---------------------------------------------------------
+
+itcnchn-lx4013.ikea.com
+---------------------
+OM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "OM1_server" : RUNNING 
+Current state of "OM2_server" : RUNNING 
+Current state of "REPORT_server" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41973.ikea.com
+---------------------
+OM Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "OM1_server" : RUNNING 
+Current state of "OM2_server" : RUNNING 
+Current state of "REPORT_server" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41409.ikea.com
+---------------------
+CUSIS Application
+
+Current state of "ADF_MS01" : RUNNING 
+Current state of "ADF_MS02" : RUNNING 
+Current state of "AdminServer" : RUNNING 
+Current state of "OCC_MS01" : RUNNING 
+Current state of "OCC_MS02" : RUNNING 
+Current state of "OCC_MS03" : RUNNING 
+Current state of "OCC_MS04" : RUNNING 
+Current state of "OSB_MS01" : RUNNING 
+Current state of "OSB_MS02" : RUNNING 
+Current state of "OSB_MS03" : RUNNING 
+Current state of "OSB_MS04" : RUNNING 
+Current state of "SOA_MS01" : RUNNING 
+Current state of "SOA_MS02" : RUNNING 
+Current state of "SOA_MS03" : RUNNING 
+Current state of "SOA_MS04" : RUNNING 
+Current state of "WSM_MS01" : RUNNING 
+Current state of "WSM_MS02" : RUNNING 
+Current state of "WSM_MS03" : RUNNING 
+Current state of "WSM_MS04" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42082.ikea.com
+---------------------
+COMPASS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_FORMS" : RUNNING 
+Current state of "WLS_REPORTS" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41653.ikea.com
+---------------------
+IDRS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_FORMS" : RUNNING 
+Current state of "WLS_FORMS1" : RUNNING 
+Current state of "WLS_FORMS2" : RUNNING 
+Current state of "WLS_REPORTS" : RUNNING 
+Current state of "WLS_REPORTS1" : RUNNING 
+Current state of "WLS_REPORTS2" : RUNNING
+---------------------------------------------------------
+
+itusphi-lx4044.ikea.com
+---------------------
+SAREC Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "wls_sarec41" : RUNNING 
+Current state of "wls_sarec42" : RUNNING 
+Current state of "wls_sarec51" : RUNNING 
+Current state of "wls_sarec52" : RUNNING
+---------------------------------------------------------
+
+itsgsng-lx4052.ikeaa.com
+---------------------
+SAREC Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "wls_sarec61" : RUNNING 
+Current state of "wls_sarec62" : RUNNING 
+Current state of "wls_sarec71" : RUNNING 
+Current state of "wls_sarec72" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42018.ikea.com
+---------------------
+SAREC Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "wls_sarec11" : RUNNING 
+Current state of "wls_sarec12" : RUNNING 
+Current state of "wls_sarec21" : RUNNING 
+Current state of "wls_sarec22" : RUNNING 
+Current state of "wls_sarec31" : RUNNING 
+Current state of "wls_sarec32" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42119.ikea.com
+---------------------
+SDE Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "soa_server1" : RUNNING 
+Current state of "soa_server2" : RUNNING 
+Current state of "soa_server3" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42115.ikea.com
+---------------------
+SDE Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "sde9archive_ucm" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42122.ikea.com
+---------------------
+SDE Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "IBR_server1" : RUNNING 
+Current state of "IBR_server2" : RUNNING 
+Current state of "IBR_server3" : RUNNING 
+Current state of "UCM_server1" : RUNNING 
+Current state of "UCM_server2" : RUNNING 
+Current state of "UCM_server3" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42123.ikea.com
+---------------------
+SDE Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "capture_server1" : RUNNING 
+Current state of "capture_server2" : RUNNING 
+Current state of "capture_server3" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx42116.ikea.com
+---------------------
+SDE Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "bi_server1" : RUNNING 
+Current state of "bi_server2" : RUNNING 
+Current state of "bi_server3" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41536.ikea.com
+---------------------
+STOC/RESTOC/RIMS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_FORMS" : RUNNING 
+Current state of "WLS_REPORTS" : RUNNING
+---------------------------------------------------------
+
+itseelm-lx41142.ikea.com
+---------------------
+STOC/RESTOC/RIMS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_FORMS" : RUNNING 
+Current state of "WLS_REPORTS" : RUNNING
+---------------------------------------------------------
+
+retat085-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retat090-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retat273-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retat155-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retat386-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retat388-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retat587-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retau006-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retau384-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retau377-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retau385-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retau446-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retau451-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retau919-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retbe169-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retbe179-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retbe376-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retbe483-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retbe375-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retbe482-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca039-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca040-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca249-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca004-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca003-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca149-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca216-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca414-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca256-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca349-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca313-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca659-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde343-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde324-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retdk005-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde412-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde421-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retdk094-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retdk121-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retdk298-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfi202-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfi301-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfi422-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr562-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr645-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit029-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit098-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit231-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit116-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit295-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit232-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit233-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit234-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit303-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit353-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit354-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit352-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit356-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit427-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit355-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit455-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit456-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit457-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl087-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retno091-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde069-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit458-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde066-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde075-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde092-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde118-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde129-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde119-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde117-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde124-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde147-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde146-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde139-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde174-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde184-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde148-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde221-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde187-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde224-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde223-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde653-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde226-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde227-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde228-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde229-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde289-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde245-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde320-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde321-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde325-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde328-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde326-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde333-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde332-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde369-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde397-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde396-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde425-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde430-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde225-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde222-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde394-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl089-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl088-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl270-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl272-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl312-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl274-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl378-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl391-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl403-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl415-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnl404-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpl205-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpl294-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpl188-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpl203-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpl307-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpl306-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpl329-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpl429-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpl583-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes030-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes277-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes171-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes280-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes339-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes304-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes282-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes406-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes497-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes428-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes283-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes449-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes502-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes498-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes665-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retau460-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retau556-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca230-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca559-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retau557-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retca529-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp189-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp447-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp359-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp392-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp486-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp448-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp509-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp496-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp887-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp671-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp651-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjp647-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retro500-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retro059-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retro664-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retrs050-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retsk489-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retkr373-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retkr582-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retkr522-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn058-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retkr602-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn584-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn459-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn466-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn481-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn484-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn485-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn495-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn512-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn521-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn214-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn164-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn247-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn279-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn330-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn340-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn401-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn544-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn568-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn558-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn572-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn581-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn644-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn885-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn802-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn833-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn856-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn886-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn624-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn630-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retno007-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcn621-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retno126-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retno095-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retno371-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retno441-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retno390-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit111-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retit314-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes031-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retes276-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retbe423-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+rethr021-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retbe452-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcz278-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcz178-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcz309-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcz408-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfi008-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr018-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr051-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr060-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr082-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr083-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr130-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr086-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr134-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr131-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr133-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr163-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr177-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr198-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr239-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr199-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr242-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr285-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr260-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr345-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr315-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr316-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr389-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr310-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr402-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr431-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr434-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr433-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr435-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr444-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr432-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr487-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfr580-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde494-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde492-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde102-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde493-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde551-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb461-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde617-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retde520-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb113-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb144-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb141-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb142-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb261-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb262-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb263-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb264-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb265-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb266-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb267-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb125-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb143-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb140-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb185-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb519-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb186-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb548-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+rethu180-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb567-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retgb642-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+rethu182-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+rethu507-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retie038-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpt453-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpl311-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpt001-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpt009-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpt367-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse020-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retpt499-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse416-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse070-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse468-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse012-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse106-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse017-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse019-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse122-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse248-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse109-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse398-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse445-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse268-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse469-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse053-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse669-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse471-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retse589-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retch079-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retch292-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retch290-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retch101-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retch917-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retch918-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retch275-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus211-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retch291-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus152-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus153-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus166-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus215-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus168-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus327-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus488-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus374-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus535-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus537-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus165-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus560-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus569-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus209-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus027-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus026-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus064-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus028-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus145-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus067-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus103-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus158-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus154-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus157-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus167-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus162-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus156-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus159-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus170-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus175-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus183-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus210-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus207-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus213-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus347-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus257-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus379-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus410-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus399-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus409-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus411-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus508-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus462-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus511-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus536-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus570-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retus921-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retin501-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retin593-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retin545-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retin629-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retsi528-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retin578-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retatso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+res12852-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retdeso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retjpso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retieso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retcaso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retdkso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfrso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retseso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retbeso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retitso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retchso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retptso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+rethrso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retfiso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retplso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+rethuso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
+retnlso-lx4030.ikea.com
+---------------------
+IPOS Application
+
+Current state of "AdminServer" : RUNNING 
+Current state of "WLS_LIP1" : RUNNING
+---------------------------------------------------------
+
