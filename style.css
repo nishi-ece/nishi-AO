@@ -1,88 +1,127 @@
-* {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4;
-        }
+/* Main Container */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-        header {
-            background-color: #333;
-            padding: 1rem;
-            color: white;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+/* Left Section */
+.left {
+    width: 40%;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
 
-        /* Navigation Styles */
-        nav ul {
-            list-style-type: none;  /* Ensures no bullets */
-            display: flex;
-            justify-content: center;
-            padding-left: 0;         /* Removes any padding */
-            margin: 0;              /* Ensures no margin */
-        }
+.left img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
 
-        nav ul li {
-            margin: 0 15px;
-        }
+.left h1 {
+    font-size: 20px;
+    margin: 15px 0;
+}
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.left h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
 
-        nav ul li a:hover {
-            color: #ff6347;
-        }
+.left button {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
-        /* Pipe separator between items */
-        nav ul li:not(:last-child)::after {
-            content: "|";
-            margin-left: 15px;
-        }
+.left button:hover {
+    background-color: #ddd;
+}
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+/* Social Icons */
+.social-icons {
+    margin-top: 15px;
+}
 
-        .section {
-            padding: 80px 20px; /* Adjust for fixed header */
-            margin: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-top: 60px; /* To prevent content being hidden behind fixed header */
-        }
+.social-icons a {
+    margin: 0 8px;
+    display: inline-block;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-        }
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
 
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
+/* Right Section */
+.right {
+    width: 60%;
+    padding: 30px;
+}
 
-        form input[type="submit"] {
-            cursor: pointer;
-        }
+.right h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
+.right p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buttons button:hover {
+    background-color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+    .left, .right {
+        width: 100%;
+        text-align: center;
+    }
+    .social-icons {
+        margin-bottom: 15px;
+    }
+}

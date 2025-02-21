@@ -1,4 +1,14 @@
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent form submission
-    alert('Thank you for contacting me! I’ll get back to you soon.');
-});
+// Function to simulate sending an email
+function sendEmail() {
+    window.location.href = "mailto:nishisheeba196@gmail.com";
+}
+
+// Function to view Resume
+function viewResume() {
+    alert("Resume feature coming soon!");
+}
+
+// Function to view Portfolio
+function viewPortfolio() {
+    alert("Portfolio feature coming soon!");
+}
