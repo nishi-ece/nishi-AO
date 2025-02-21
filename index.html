@@ -83,7 +83,13 @@
             text-align: center;
             margin-bottom: 20px;
         }
-
+        .about-img {
+            width: 150px; /* Adjust width as needed */
+            height: 150px; /* Adjust height */
+            border-radius: 50%; /* Round the image */
+            object-fit: cover; /* Ensures the image fits without distortion */
+            border: 3px solid #333; /* Optional: add a border around the image */
+        }
         .section {
             padding: 80px 20px; /* Adjust for fixed header */
             margin: 20px;
@@ -137,6 +143,7 @@
 
     <!-- About Section -->
     <section id="about" class="section">
+        <img src="images/about-bg.png" alt="About Me" class="about-img">
         <h1>About Me</h1>
         <p>As a Middleware Engineer with 3+ years of experience, I specialize in automating middleware environments using Ansible.</p>
         <p>I am skilled in utilizing Visual Studio Code for source code management and GitHub for version control, ensuring efficient and streamlined development workflows.</p>
