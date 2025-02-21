@@ -22,9 +22,10 @@ header {
 }
 
 nav ul {
-  list-style: none;
+  list-style: none; /* Ensures no bullets are shown */
   display: flex;
   justify-content: center;
+  padding-left: 0; /* Prevent any padding from left side */
 }
 
 nav ul li {
@@ -41,14 +42,15 @@ nav ul li a:hover {
   color: #ff6347;
 }
 
-/* Remove the default bullet points and separators between links */
+/* Add pipe separator after each list item */
 nav ul li::after {
   content: "|";
   margin-left: 15px;
 }
 
+/* Remove the pipe from the last item */
 nav ul li:last-child::after {
-  content: ""; /* Remove the pipe from the last list item */
+  content: "";
 }
 
 h1 {
