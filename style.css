@@ -22,10 +22,11 @@ header {
 }
 
 nav ul {
-  list-style: none; /* Ensures no bullets are shown */
+  list-style: none; /* Remove bullet points */
   display: flex;
   justify-content: center;
-  padding-left: 0; /* Prevent any padding from left side */
+  padding-left: 0; /* Remove any padding */
+  margin: 0; /* Remove default margin */
 }
 
 nav ul li {
@@ -42,15 +43,9 @@ nav ul li a:hover {
   color: #ff6347;
 }
 
-/* Add pipe separator after each list item */
-nav ul li::after {
+nav ul li:not(:last-child)::after {
   content: "|";
-  margin-left: 15px;
-}
-
-/* Remove the pipe from the last item */
-nav ul li:last-child::after {
-  content: "";
+  margin-left: 15px; /* Adds space between the links and the pipe */
 }
 
 h1 {
@@ -59,12 +54,12 @@ h1 {
 }
 
 .section {
-  padding: 80px 20px; /* Increased top padding to prevent content overlap due to fixed header */
+  padding: 80px 20px; /* Adjust for fixed header */
   margin: 20px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 60px; /* To ensure sections are not hidden behind the fixed header */
+  margin-top: 60px; /* To prevent content being hidden behind fixed header */
 }
 
 footer {
