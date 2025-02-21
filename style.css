@@ -1,4 +1,3 @@
-/* Basic reset and font settings */
 * {
   margin: 0;
   padding: 0;
@@ -21,12 +20,13 @@ header {
   z-index: 1000;
 }
 
+/* Navigation Styles */
 nav ul {
-  list-style: none; /* Remove bullet points */
+  list-style-type: none;  /* Ensures no bullets */
   display: flex;
   justify-content: center;
-  padding-left: 0; /* Remove any padding */
-  margin: 0; /* Remove default margin */
+  padding-left: 0;         /* Removes any padding */
+  margin: 0;              /* Ensures no margin */
 }
 
 nav ul li {
@@ -43,9 +43,10 @@ nav ul li a:hover {
   color: #ff6347;
 }
 
+/* Pipe separator between items */
 nav ul li:not(:last-child)::after {
   content: "|";
-  margin-left: 15px; /* Adds space between the links and the pipe */
+  margin-left: 15px;
 }
 
 h1 {
