@@ -46,11 +46,15 @@ h1, h2 {
 
 /* Home Section */
 #home {
+  font-family: "Playwrite IT Moderna", serif;
+  font-optical-sizing: auto;
   background-color: #4CAF50;
   color: white;
 }
 
 #home a {
+  font-family: "Playwrite IT Moderna", serif;
+  font-optical-sizing: auto;
   display: block;
   text-align: center;
   margin-top: 20px;
