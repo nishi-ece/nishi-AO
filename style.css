@@ -39,6 +39,8 @@ section {
 }
 
 h1, h2 {
+  font-family: "Playwrite IT Moderna", serif;
+  font-optical-sizing: auto;
   text-align: center;
 }
 
