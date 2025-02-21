@@ -1,131 +1,90 @@
-/* General Styles */
-body {
-  font-family: "Playwrite IT Moderna", serif;
-  font-optical-sizing: auto;
-  font-weight: 20;
-  font-style: normal;
+/* Basic reset and font settings */
+* {
   margin: 0;
   padding: 0;
-  background-color: #cef0e1;
-  color: #000000;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
 
 header {
-  background-color: #000000;
-  color: rgb(172, 213, 191);
-  padding: 20px;
-  text-align: center;
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
-header nav ul {
+nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-header nav ul li {
-  display: inline;
+nav ul li {
   margin: 0 15px;
 }
 
-header nav ul li a {
+nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
-section {
-  padding: 40px;
-  margin: 20px 0;
+nav ul li a:hover {
+  color: #ff6347;
 }
 
-h1, h2 {
-  font-family: "Playwrite IT Moderna", serif;
-  font-optical-sizing: auto;
+/* Remove the default bullet points and separators between links */
+nav ul li::after {
+  content: "|";
+  margin-left: 15px;
+}
+
+nav ul li:last-child::after {
+  content: ""; /* Remove the pipe from the last list item */
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Home Section */
-#home {
-  font-family: "Playwrite IT Moderna", serif;
-  font-optical-sizing: auto;
-  background-color: #4CAF50;
-  color: white;
+.section {
+  padding: 80px 20px; /* Increased top padding to prevent content overlap due to fixed header */
+  margin: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 60px; /* To ensure sections are not hidden behind the fixed header */
 }
 
-#home a {
-  font-family: "Playwrite IT Moderna", serif;
-  font-optical-sizing: auto;
-  display: block;
+footer {
   text-align: center;
-  margin-top: 20px;
+  padding: 20px;
   background-color: #333;
   color: white;
-  padding: 10px;
-  text-decoration: none;
 }
 
-/* Portfolio Section */
-#portfolio {
-  background-color: #fff;
-}
-
-.project {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.project img {
+form input, form textarea {
   width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-
-.project a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #333;
-  text-decoration: none;
-}
-
-/* Contact Section */
-#contact {
-  background-color: #f1f1f1;
-}
-
-#contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#contact label {
-  margin-top: 10px;
-}
-
-#contact input {
   padding: 10px;
-  margin-top: 5px;
-  width: 250px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
-#contact button {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  border: none;
+form input[type="submit"] {
   cursor: pointer;
 }
 
-#contact button:hover {
-  background-color: #555;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
