@@ -126,7 +126,15 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             margin-top: 60px; /* To prevent content being hidden behind fixed header */
         }
-
+        .heading {
+            background-color: #d9bbd3;
+            padding: 1rem;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
         footer {
             text-align: center;
             padding: 20px;
@@ -163,7 +171,7 @@
     </header>
 
     <!-- Home Section -->
-    <section id="home" class="section">
+    <section id="home" class="heading">
         <h1>NISHI SHEEBA</h1>
     </section>
 
@@ -184,7 +192,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="heading">
         <h2>Contact</h2>
         <p>If you want to get in touch, feel free to reach out!</p>
         <button onclick="sendEmail()">Email me</button>
