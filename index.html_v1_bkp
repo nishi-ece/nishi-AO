@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NISHI SHEEBA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Portfolio</title>
     <style>
         /* Basic reset and font settings */
         * {
@@ -113,17 +111,14 @@
 
     <!-- Home Section -->
     <section id="home" class="section">
-        <h1>Nishi Sheeba</h1>
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm a Middleware Engineer with 3+ years of experience...</p>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section">
         <h1>About Me</h1>
-        <p>As a Middleware Engineer with 3+ years of experience, I specialize in automating middleware environments using Ansible.</p>
-        <p>I am skilled in utilizing Visual Studio Code for source code management and GitHub for version control, ensuring efficient and streamlined development workflows.</p>
-        <p>As part of my role as a Middleware Administrator, I have experience with tools like Jira for workflow management, ServiceNow for incident management and Jenkins for deployment.</p>
-        <p>I have also managed applications using Docker and worked extensively with various Oracle products, including WebLogic, Oracle Forms and Reports, and Oracle Enterprise Manager.</p>
-        <p>Additionally, I use 1Password for secure password management to ensure best practices in security.</p>
+        <p>I'm a Middleware Engineer with 3+ years of experience...</p>
     </section>
 
     <!-- Portfolio Section -->
@@ -134,19 +129,12 @@
 
     <!-- Contact Section -->
     <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>If you want to get in touch, feel free to reach out!</p>
-        <form id="contactForm">
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" required>
-            <button type="submit">Send Message</button>
-        </form>
+        <h1>Contact Me</h1>
+        <p>Get in touch with me via the form...</p>
     </section>
 
     <footer>
         <p>&copy; 2025 Your Name</p>
     </footer>
-    
-    <script src="script.js"></script>
 </body>
 </html>
