@@ -83,6 +83,21 @@
             text-align: center;
             margin-bottom: 20px;
         }
+        #home {
+            background-image: url('images/home-bg.png'); /* Path to your image */
+            background-size: cover; /* Ensure the image covers the entire section */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Keep the image fixed while scrolling */
+            padding: 100px 20px; /* Padding to give space around the content */
+            color: rgb(0, 0, 0); /* Text color to contrast against the image */
+            text-align: center; /* Center text */
+            border-radius: 8px; /* Optional: rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for the box */
+        }
+
+        #home h1, #home p {
+            z-index: 2; /* Ensure the text appears above the background */
+        }
         #about {
             background-image: url('images/about-bg.jpg'); /* Path to your image */
             background-size: cover; /* Ensure the image covers the entire section */
