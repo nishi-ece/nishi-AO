@@ -3,35 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Engineer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nishi Sheeba</title>
+
+    <!-- Preconnect to Google Fonts and load the specific font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts for Playwrite IT Moderna (for body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts for Cormorant Garamond (for headings) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic reset and font settings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Apply Playwrite IT Moderna to the body */
+        body {
+            font-family: "Cormorant Garamond", serif;
+            font-weight: 300;
+            font-style: normal; /* Body font */
+            line-height: 1.6;
+            font-size: 18px;
+            background-color: #f4f4f4;
+        }
+
+        /* Apply Cormorant Garamond to all headings with specific weight and style */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif; /* Heading font */
+            font-weight: 700; /* Set the font-weight to 700 (bold) */
+            font-style: normal; /* Set the style to normal */
+        }
+
+        header {
+            background-color: #d9bbd3;
+            padding: 1rem;
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Navigation Styles */
+        nav ul {
+            list-style-type: none;  /* Ensures no bullets */
+            display: flex;
+            justify-content: center;
+            padding-left: 0;         /* Removes any padding */
+            margin: 0;              /* Ensures no margin */
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #000000;
+        }
+
+        /* Pipe separator between items */
+        nav ul li:not(:last-child)::after {
+            content: "|";
+            margin-left: 15px;
+        }
+
+        /*h1 {
+            text-align: left;
+            margin-bottom: 20px;
+        } */
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #home {
+            /* background-image: url('images/about-bg.jpg'); /* Path to your image */
+            /*background-size: cover; /* Ensure the image covers the entire section */
+            /*background-position: center; /* Center the image */
+            /*background-attachment: fixed; /* Keep the image fixed while scrolling */ 
+            background-color: #d9bbd3;
+            padding: 100px 20px; /* Padding to give space around the content */
+            color:  white; /* Text color to contrast against the image */
+            text-align: center; /* Center text */
+            border-radius: 8px; /* Optional: rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for the box */
+        }
+
+        #home h1, #home p {
+            z-index: 2; /* Ensure the text appears above the background */
+        }
+        #about {
+            background-image: url('images/about-bg.jpg'); /* Path to your image */
+            background-size: cover; /* Ensure the image covers the entire section */
+            background-position: center; /* Center the image */
+            background-attachment: fixed; /* Keep the image fixed while scrolling */
+            padding: 100px 20px; /* Padding to give space around the content */
+            color: rgb(0, 0, 0); /* Text color to contrast against the image */
+            text-align: center; /* Center text */
+            border-radius: 8px; /* Optional: rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: shadow for the box */
+        }
+
+        #about h1, #about p {
+            z-index: 2; /* Ensure the text appears above the background */
+        }
+        .section {
+            padding: 80px 20px; /* Adjust for fixed header */
+            margin: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 60px; /* To prevent content being hidden behind fixed header */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        form input[type="submit"] {
+            cursor: pointer;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="left">
-            <img src="images/profile.png" alt="Nishi Sheeba">
-            <h1>&lt;Nishi Sheeba&gt;</h1>
-            <h2>Middleware administrator</h2>
-            <button onclick="sendEmail()">Email me</button>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/nishi.sheeba/"><img src="images/instagram.png" alt="Instagram"></a>
-                <a href="https://wa.link/fmqk24"><img src="images/whatsapp.png" alt="Whatsapp"></a>
-                <a href="www.linkedin.com/in/nishi-sheeba-89243b18b"><img src="images/linkedin.png" alt="LinkedIn"></a>
-            </div>
-        </div>
-        <div class="right">
-            <h1>&lt;/About Me&gt;</h1>
-            <p>As a Middleware Engineer with 3+ years of experience, I specialize in automating middleware environments using Ansible.</p>
-            <p>I am skilled in utilizing Visual Studio Code for source code management and GitHub for version control, ensuring efficient and streamlined development workflows.</p>
-            <p>As part of my role as a Middleware Administrator, I have experience with tools like Jira for workflow management, ServiceNow for incident management and Jenkins for deployment.</p>
-            <p>I have also managed applications using Docker and worked extensively with various Oracle products, including WebLogic, Oracle Forms and Reports, and Oracle Enterprise Manager.</p>
-            <p>Additionally, I use 1Password for secure password management to ensure best practices in security.</p>
-            <div class="buttons">
-                <button onclick="viewResume()">Resume</button>
-                <button onclick="viewPortfolio()">Portfolio</button>
-            </div>
-        </div>
-    </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="section">
+        <h1>NISHI SHEEBA</h1>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>As a Middleware Engineer with 3+ years of experience, I specialize in automating middleware environments using Ansible.</p>
+        <p>I am skilled in utilizing Visual Studio Code for source code management and GitHub for version control, ensuring efficient and streamlined development workflows.</p>
+        <p>As part of my role as a Middleware Administrator, I have experience with tools like Jira for workflow management, ServiceNow for incident management and Jenkins for deployment.</p>
+        <p>I have also managed applications using Docker and worked extensively with various Oracle products, including WebLogic, Oracle Forms and Reports, and Oracle Enterprise Manager.</p>
+        <p>Additionally, I use 1Password for secure password management to ensure best practices in security.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <p>Here are some of my recent projects...</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>If you want to get in touch, feel free to reach out!</p>
+        <button onclick="sendEmail()">Email me</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nishi Sheeba. All rights reserved.</p>
+    </footer>
+    
     <script src="script.js"></script>
 </body>
 </html>
