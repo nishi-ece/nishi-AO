@@ -5,35 +5,36 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #ffe4e9;
     font-family: 'Press Start 2P', cursive;
+    text-align: center;
 }
 
 h1, h2 {
     color: #ff9bb3;
     margin: 10px;
     text-shadow: 2px 2px #ffc2d1;
-    font-size: 20px;
-    text-align: center;
+    font-size: 4vw;
 }
 
 .game-board {
     display: grid;
-    grid-template-columns: repeat(3, 80px); /* 3x3 grid */
-    gap: 3px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
     margin: 20px 0;
+    width: 90vw;
+    max-width: 300px;
 }
 
 .cell {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     background-color: #ffd9e1;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
-    font-weight: bold;
+    font-size: 6vw;
     color: #ff66a5;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
@@ -55,7 +56,7 @@ button {
     transition: background-color 0.3s, transform 0.1s;
     margin-top: 10px;
     font-family: 'Press Start 2P', cursive;
-    font-size: 16px;
+    font-size: 3vw;
 }
 
 button:hover {
@@ -65,8 +66,8 @@ button:hover {
 
 .pixel-heart {
     display: inline-block;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
 .pixel-heart.x {
@@ -75,4 +76,20 @@ button:hover {
 
 .pixel-heart.o {
     color: #ffb0c7;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 400px) {
+    h1, h2 {
+        font-size: 5vw;
+    }
+
+    button {
+        font-size: 4vw;
+        padding: 8px 16px;
+    }
+
+    .cell {
+        font-size: 8vw;
+    }
 }
