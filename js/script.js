@@ -10,7 +10,6 @@ const winningCombinations = [
     [0, 4, 8], [2, 4, 6]             // Diagonals
 ];
 
-// Initialize the game
 function initializeGame() {
     gameBoard.innerHTML = "";
     board = ["", "", "", "", "", "", "", "", ""];
@@ -25,16 +24,15 @@ function initializeGame() {
     }
 }
 
-// Handle player move
 function playerMove(index) {
     if (board[index] === "" && gameActive) {
         board[index] = currentPlayer;
         renderBoard();
         if (checkWin(currentPlayer)) {
-            statusText.textContent = `Player ${currentPlayer} Wins! 🎉`;
+            statusText.textContent = `Player ${currentPlayer} Wins! 💖`;
             gameActive = false;
         } else if (board.every(cell => cell !== "")) {
-            statusText.textContent = "It's a Tie!";
+            statusText.textContent = "It's a Tie! 💞";
             gameActive = false;
         } else {
             currentPlayer = "O";
@@ -44,7 +42,6 @@ function playerMove(index) {
     }
 }
 
-// Computer move (random)
 function computerMove() {
     if (!gameActive) return;
     let available = board.map((val, idx) => val === "" ? idx : null).filter(val => val !== null);
@@ -52,10 +49,10 @@ function computerMove() {
     board[randomIndex] = currentPlayer;
     renderBoard();
     if (checkWin(currentPlayer)) {
-        statusText.textContent = `Computer (O) Wins! 🤖`;
+        statusText.textContent = `Computer (O) Wins! 💔`;
         gameActive = false;
     } else if (board.every(cell => cell !== "")) {
-        statusText.textContent = "It's a Tie!";
+        statusText.textContent = "It's a Tie! 💞";
         gameActive = false;
     } else {
         currentPlayer = "X";
@@ -63,22 +60,25 @@ function computerMove() {
     }
 }
 
-// Render the board
 function renderBoard() {
     const cells = document.querySelectorAll(".cell");
     cells.forEach((cell, index) => {
-        cell.textContent = board[index];
+        if (board[index] === "X") {
+            cell.innerHTML = '<span class="pixel-heart x">💖</span>';
+        } else if (board[index] === "O") {
+            cell.innerHTML = '<span class="pixel-heart o">💗</span>';
+        } else {
+            cell.innerHTML = "";
+        }
     });
 }
 
-// Check for a win
 function checkWin(player) {
     return winningCombinations.some(combination => {
         return combination.every(index => board[index] === player);
     });
 }
 
-// Restart the game
 function restartGame() {
     initializeGame();
 }

@@ -6,13 +6,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f8ff;
-    font-family: Arial, sans-serif;
+    background-color: #ffe4e9;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 h1, h2 {
-    color: #333;
+    color: #ff9bb3;
     margin: 10px;
+    text-shadow: 2px 2px #ffc2d1;
 }
 
 .game-board {
@@ -25,31 +26,50 @@ h1, h2 {
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #add8e6;
+    background-color: #ffd9e1;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: 40px;
     font-weight: bold;
-    color: #333;
+    color: #ff66a5;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s;
+    border: 2px solid #ffc2d1;
 }
 
 .cell:hover {
-    background-color: #87ceeb;
+    background-color: #ffb0c7;
+    transform: scale(1.1);
 }
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ff9bb3;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #ff66a5;
+    transform: scale(1.05);
+}
+
+/* Pixel Heart X and O */
+.pixel-heart {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.pixel-heart.x {
+    color: #ff66a5;
+}
+
+.pixel-heart.o {
+    color: #ffb0c7;
 }
