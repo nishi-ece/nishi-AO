@@ -7,30 +7,32 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #ffe4e9;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Press Start 2P', cursive;
 }
 
 h1, h2 {
     color: #ff9bb3;
     margin: 10px;
     text-shadow: 2px 2px #ffc2d1;
+    font-size: 20px;
+    text-align: center;
 }
 
 .game-board {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    gap: 5px;
+    grid-template-columns: repeat(6, 80px);
+    gap: 3px;
     margin: 20px 0;
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: #ffd9e1;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: bold;
     color: #ff66a5;
     cursor: pointer;
@@ -52,6 +54,8 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.1s;
     margin-top: 10px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
 }
 
 button:hover {
@@ -59,7 +63,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Pixel Heart X and O */
 .pixel-heart {
     display: inline-block;
     font-size: 20px;
