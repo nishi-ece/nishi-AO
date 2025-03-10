@@ -1,6 +1,6 @@
 const gameBoard = document.getElementById("gameBoard");
 const statusText = document.getElementById("status");
-const gridSize = 6;
+const gridSize = 6;  // Corrected to 6x6
 let board = Array(gridSize * gridSize).fill("");
 let currentPlayer = "X";
 let gameActive = true;
@@ -46,7 +46,7 @@ generateWinningCombinations();
 
 function initializeGame() {
     gameBoard.innerHTML = "";
-    board.fill("");
+    board = Array(gridSize * gridSize).fill("");
     gameActive = true;
     currentPlayer = "X";
     statusText.textContent = "Your Turn (X)";
@@ -69,28 +69,9 @@ function playerMove(index) {
             statusText.textContent = "It's a Tie! 💞";
             gameActive = false;
         } else {
-            currentPlayer = "O";
-            statusText.textContent = "Computer's Turn (O)";
-            setTimeout(computerMove, 300);
+            currentPlayer = currentPlayer === "X" ? "O" : "X";
+            statusText.textContent = `Your Turn (${currentPlayer})`;
         }
-    }
-}
-
-function computerMove() {
-    if (!gameActive) return;
-    let available = board.map((val, idx) => val === "" ? idx : null).filter(val => val !== null);
-    let randomIndex = available[Math.floor(Math.random() * available.length)];
-    board[randomIndex] = currentPlayer;
-    renderBoard();
-    if (checkWin(currentPlayer)) {
-        statusText.textContent = `Computer (O) Wins! 💔`;
-        gameActive = false;
-    } else if (board.every(cell => cell !== "")) {
-        statusText.textContent = "It's a Tie! 💞";
-        gameActive = false;
-    } else {
-        currentPlayer = "X";
-        statusText.textContent = "Your Turn (X)";
     }
 }
 
