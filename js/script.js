@@ -32,13 +32,43 @@ function playerMove(index) {
         if (checkWin(currentPlayer)) {
             statusText.textContent = `Player ${currentPlayer} Wins! 💖`;
             gameActive = false;
-        } else if (board.every(cell => cell !== "")) {
+            return;
+        }
+        if (board.every(cell => cell !== "")) {
             statusText.textContent = "It's a Tie! 💞";
             gameActive = false;
-        } else {
-            currentPlayer = currentPlayer === "X" ? "O" : "X";
-            statusText.textContent = `Your Turn (${currentPlayer})`;
+            return;
         }
+
+        // Switch player and let the opponent (O) make a move automatically
+        currentPlayer = "O";
+        statusText.textContent = `Opponent's Turn (O)`;
+        setTimeout(opponentMove, 300);  // Adding a slight delay for a natural feel
+    }
+}
+
+function opponentMove() {
+    let emptyCells = board.map((cell, index) => (cell === "" ? index : null)).filter(index => index !== null);
+
+    // Choose a random empty cell for the opponent
+    let randomIndex = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+    if (randomIndex !== undefined) {
+        board[randomIndex] = currentPlayer;
+        renderBoard();
+        if (checkWin(currentPlayer)) {
+            statusText.textContent = `Opponent (O) Wins! 💗`;
+            gameActive = false;
+            return;
+        }
+        if (board.every(cell => cell !== "")) {
+            statusText.textContent = "It's a Tie! 💞";
+            gameActive = false;
+            return;
+        }
+
+        // Switch back to player X
+        currentPlayer = "X";
+        statusText.textContent = `Your Turn (X)`;
     }
 }
 
