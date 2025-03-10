@@ -20,7 +20,7 @@ h1, h2 {
 
 .game-board {
     display: grid;
-    grid-template-columns: repeat(6, 80px); /* 6x6 grid */
+    grid-template-columns: repeat(3, 80px); /* 3x3 grid */
     gap: 3px;
     margin: 20px 0;
 }

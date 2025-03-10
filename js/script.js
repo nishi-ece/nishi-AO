@@ -1,52 +1,19 @@
 const gameBoard = document.getElementById("gameBoard");
 const statusText = document.getElementById("status");
-const gridSize = 6;  // Corrected to 6x6
+const gridSize = 3;  // Reverted to 3x3
 let board = Array(gridSize * gridSize).fill("");
 let currentPlayer = "X";
 let gameActive = true;
 
-const winningCombinations = [];
-
-// Generate all possible winning combinations (rows, columns, diagonals)
-function generateWinningCombinations() {
-    // Rows
-    for (let r = 0; r < gridSize; r++) {
-        const row = [];
-        for (let c = 0; c < gridSize; c++) {
-            row.push(r * gridSize + c);
-        }
-        winningCombinations.push(row);
-    }
-
-    // Columns
-    for (let c = 0; c < gridSize; c++) {
-        const col = [];
-        for (let r = 0; r < gridSize; r++) {
-            col.push(r * gridSize + c);
-        }
-        winningCombinations.push(col);
-    }
-
-    // Diagonals (top-left to bottom-right)
-    const diag1 = [];
-    for (let d = 0; d < gridSize; d++) {
-        diag1.push(d * gridSize + d);
-    }
-    winningCombinations.push(diag1);
-
-    // Diagonals (top-right to bottom-left)
-    const diag2 = [];
-    for (let d = 0; d < gridSize; d++) {
-        diag2.push(d * gridSize + (gridSize - 1 - d));
-    }
-    winningCombinations.push(diag2);
-}
-
-generateWinningCombinations();
+const winningCombinations = [
+    [0, 1, 2], [3, 4, 5], [6, 7, 8],  // Rows
+    [0, 3, 6], [1, 4, 7], [2, 5, 8],  // Columns
+    [0, 4, 8], [2, 4, 6]              // Diagonals
+];
 
 function initializeGame() {
     gameBoard.innerHTML = "";
-    board = Array(gridSize * gridSize).fill("");
+    board.fill("");
     gameActive = true;
     currentPlayer = "X";
     statusText.textContent = "Your Turn (X)";
