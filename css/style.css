@@ -18,91 +18,36 @@ h1 {
     font-size: 20px;
 }
 
-h2 {
-    color: #ff9bb3;
-    margin: 5px;
-    text-shadow: 1px 1px #ffc2d1;
-    font-size: 16px;
-}
-
-.game-board {
+.bubble-wrap {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(10, 50px);
     gap: 5px;
-    margin: 10px 0;
-    width: 180px;
+    margin: 20px;
 }
 
-.cell {
-    width: 60px;
-    height: 60px;
-    background-color: #ffd9e1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    color: #ff66a5;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
-    border: 2px solid #ffc2d1;
-    border-radius: 5px;
-}
-
-.cell:hover {
-    background-color: #ffb0c7;
-    transform: scale(1.05);
-}
-
-button {
-    padding: 5px 12px;
+.bubble {
+    width: 50px;
+    height: 50px;
     background-color: #ff9bb3;
-    color: white;
-    border: none;
-    border-radius: 8px;
+    border-radius: 50%;
+    box-shadow: 0 4px #ff66a5;
     cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
-    margin-top: 8px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 14px;
+    transition: transform 0.1s, background-color 0.2s;
 }
 
-button:hover {
+.bubble.popped {
     background-color: #ff66a5;
-    transform: scale(1.03);
+    transform: scale(0.6);
+    box-shadow: none;
 }
 
-.pixel-heart {
-    display: inline-block;
-    font-size: 22px;
-    line-height: 1.1em;
+.bubble:active {
+    transform: scale(0.8);
+    box-shadow: none;
 }
 
-.pixel-heart.x {
-    color: #ff66a5;
-}
-
-.pixel-heart.o {
-    color: #ffb0c7;
-}
-
-/* Responsive Design */
-@media (max-width: 400px) {
-    h1, h2 {
-        font-size: 16px;
-    }
-
-    button {
-        font-size: 12px;
-        padding: 4px 10px;
-    }
-
-    .cell {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-    }
-
-    .game-board {
-        width: 160px;
+@media (max-width: 600px) {
+    .bubble-wrap {
+        grid-template-columns: repeat(5, 50px);
     }
 }
