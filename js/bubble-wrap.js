@@ -3,8 +3,9 @@ const bubbleWrap = document.getElementById("bubbleWrap");
 // Bubble popping sound
 const popSound = new Audio("https://www.soundjay.com/button/sounds/button-16.mp3");
 
-// Create the bubbles
+// Create bubbles
 function createBubbles(rows, cols) {
+    bubbleWrap.innerHTML = "";
     for (let i = 0; i < rows * cols; i++) {
         const bubble = document.createElement("div");
         bubble.classList.add("bubble");
@@ -13,7 +14,7 @@ function createBubbles(rows, cols) {
         bubble.addEventListener("click", () => {
             if (!bubble.classList.contains("popped")) {
                 bubble.classList.add("popped");
-                popSound.currentTime = 0; // Reset sound
+                popSound.currentTime = 0;
                 popSound.play();
             }
         });
@@ -22,5 +23,10 @@ function createBubbles(rows, cols) {
     }
 }
 
-// Initialize the bubble wrap
+// Reset bubbles
+function resetBubbles() {
+    createBubbles(10, 10);
+}
+
+// Initialize bubble wrap
 createBubbles(10, 10);
