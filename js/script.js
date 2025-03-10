@@ -40,17 +40,15 @@ function playerMove(index) {
             return;
         }
 
-        // Switch player and let the opponent (O) make a move automatically
         currentPlayer = "O";
         statusText.textContent = `Opponent's Turn (O)`;
-        setTimeout(opponentMove, 300);  // Adding a slight delay for a natural feel
+        setTimeout(opponentMove, 300);
     }
 }
 
 function opponentMove() {
     let emptyCells = board.map((cell, index) => (cell === "" ? index : null)).filter(index => index !== null);
 
-    // Choose a random empty cell for the opponent
     let randomIndex = emptyCells[Math.floor(Math.random() * emptyCells.length)];
     if (randomIndex !== undefined) {
         board[randomIndex] = currentPlayer;
@@ -66,7 +64,6 @@ function opponentMove() {
             return;
         }
 
-        // Switch back to player X
         currentPlayer = "X";
         statusText.textContent = `Your Turn (X)`;
     }
