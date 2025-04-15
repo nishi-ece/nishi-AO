@@ -1,25 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Test Canvas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giraffe Game</title>
   <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
     canvas {
-      background: skyblue;
       display: block;
+      background: #87CEEB;
     }
   </style>
 </head>
 <body>
-  <canvas id="gameCanvas" width="800" height="600"></canvas>
-
-  <script>
-    alert("Inline JS loaded!");
-
-    const canvas = document.getElementById("gameCanvas");
-    const ctx = canvas.getContext("2d");
-
-    ctx.fillStyle = "green";
-    ctx.fillRect(200, 200, 100, 100);
-  </script>
+  <canvas id="gameCanvas"></canvas>
+  <script src="script.js"></script>
 </body>
 </html>
