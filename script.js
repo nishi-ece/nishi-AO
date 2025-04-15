@@ -10,7 +10,7 @@ const giraffe = {
   y: canvas.height - 120,
   width: 100,
   height: 100,
-  speed: 15
+  speed: 6
 };
 
 // Notes (falling shapes)
@@ -100,9 +100,16 @@ function draw() {
   ctx.fillText("Score: " + score, 20, 40);
 }
 
-function loop() {
-  update();
-  draw();
+let lastTime = 0;
+const fps = 60;
+const interval = 1000 / fps;
+
+function loop(timestamp) {
+  if (timestamp - lastTime > interval) {
+    update();
+    draw();
+    lastTime = timestamp;
+  }
   requestAnimationFrame(loop);
 }
 
