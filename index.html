@@ -35,8 +35,9 @@
             dx: 5, // speed
             img: new Image(),
         };
-        
-        giraffe.img.src = 'https://www.vecteezy.com/png/44183583-little-cute-giraffe-cartoon-illustration'; // Replace with actual giraffe image URL
+
+        // Placeholder giraffe image URL
+        giraffe.img.src = 'https://via.placeholder.com/100x150/ff7f00/ffffff?text=Giraffe'; 
 
         // Falling notes
         const notes = [];
@@ -51,7 +52,8 @@
                 height: 50,
                 img: new Image(),
             };
-            note.img.src = 'https://www.vecteezy.com/png/10836541-3d-isolated-things-about-music'; // Replace with music note image URL
+            // Placeholder note image URL
+            note.img.src = 'https://via.placeholder.com/50x50/0000ff/ffffff?text=Note'; 
             notes.push(note);
         }
 
@@ -135,8 +137,11 @@
             requestAnimationFrame(updateGame);
         }
 
-        // Start the game
-        updateGame();
+        // Start the game when images are loaded
+        giraffe.img.onload = () => {
+            updateGame();
+        };
+
     </script>
 </body>
 </html>
