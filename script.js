@@ -110,6 +110,7 @@ function draw() {
         ctx.moveTo(i * laneWidth, 0);
         ctx.lineTo(i * laneWidth, canvas.height);
         ctx.stroke();
+    }
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Draw giraffe image
