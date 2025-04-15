@@ -104,40 +104,47 @@ body {
   @keyframes blink {
     50% { border-color: transparent; }
   }
-
-  #chatbot {
+/* Toggle Chat Button */
+#chatToggle {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 300px;
-    font-family: 'Segoe UI', sans-serif;
-    z-index: 999;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   }
   
-  #chatbox {
-    background: #ffffff;
-    border: 2px solid #1abc9c;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    padding: 10px;
+  /* Chatbox Hidden/Shown */
+  #chatbot.hidden {
+    display: none;
   }
   
-  #messages {
-    height: 200px;
-    overflow-y: auto;
-    font-size: 14px;
-    padding: 5px;
-    color: #333;
+  /* Input row for input + send button */
+  .input-row {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
   }
   
-  #messages div {
-    margin: 5px 0;
-  }
-  
-  #userInput {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
+  #sendBtn {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
     border-radius: 4px;
-  }  
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #sendBtn:hover {
+    background-color: #16a085;
+  }
+  

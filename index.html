@@ -35,11 +35,19 @@
 
   <script src="script.js"></script>
 
-  <div id="chatbot">
+    <!-- Chat Toggle Button -->
+    <button id="chatToggle">&#128172;</button>
+
+    <!-- Chatbot Box -->
+    <div id="chatbot" class="hidden">
     <div id="chatbox">
         <div id="messages"></div>
+        <div class="input-row">
         <input type="text" id="userInput" placeholder="Ask me something..." />
+        <button id="sendBtn">&#10148;</button> <!-- Arrow icon -->
+        </div>
     </div>
-  </div>
+    </div>
+
 </body>
 </html>

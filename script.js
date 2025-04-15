@@ -1,16 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("userInput");
     const messages = document.getElementById("messages");
+    const sendBtn = document.getElementById("sendBtn");
+    const chatToggle = document.getElementById("chatToggle");
+    const chatbot = document.getElementById("chatbot");
   
-    input.addEventListener("keypress", function (e) {
-      if (e.key === "Enter") {
-        const userText = input.value.trim();
-        if (!userText) return;
-        appendMessage("You: " + userText);
-        getBotResponse(userText.toLowerCase());
-        input.value = "";
-      }
+    // Toggle Chatbot
+    chatToggle.addEventListener("click", () => {
+      chatbot.classList.toggle("hidden");
     });
+  
+    // Send message on button click
+    sendBtn.addEventListener("click", sendMessage);
+  
+    // Optional: send on Enter
+    input.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") sendMessage();
+    });
+  
+    function sendMessage() {
+      const userText = input.value.trim();
+      if (!userText) return;
+      appendMessage("You: " + userText);
+      getBotResponse(userText.toLowerCase());
+      input.value = "";
+    }
   
     function appendMessage(text) {
       const msg = document.createElement("div");
@@ -38,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       setTimeout(() => {
         appendMessage("Bot: " + response);
-      }, 500); // Simulate typing delay
+      }, 500);
     }
-  });  
+  });
+  
