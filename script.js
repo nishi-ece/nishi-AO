@@ -1,14 +1,4 @@
-// Load background music
-const bgMusic = new Audio("bg-music.mp3");
-bgMusic.loop = true;
-bgMusic.volume = 0.4; // optional: make it less loud
-
-// Play after user interaction (required on some browsers)
-document.addEventListener("keydown", () => {
-  if (bgMusic.paused) {
-    bgMusic.play();
-  }
-});
+import { setupBeatManager } from "./beatManager.js";
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
@@ -16,12 +6,15 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+// Centered lane setup
 const laneCount = 4;
-const laneWidth = canvas.width / laneCount;
+const laneWidth = 80;
+const totalLaneWidth = laneCount * laneWidth;
+const startX = canvas.width / 2 - totalLaneWidth / 2;
 
 const lanes = [];
 for (let i = 0; i < laneCount; i++) {
-  lanes.push(i * laneWidth + laneWidth / 2);
+  lanes.push(startX + i * laneWidth + laneWidth / 2);
 }
 
 // Giraffe player
@@ -33,14 +26,18 @@ const giraffe = {
   speed: 6
 };
 
-// Notes (falling shapes)
+// Notes
 const notes = [];
-const noteRadius = 30;
+const noteRadius = 20;
 const noteSpeed = 4;
 
 let score = 0;
 
-// Keyboard control
+// Load giraffe image
+const giraffeImg = new Image();
+giraffeImg.src = "giraffe.png";
+
+// Controls
 let leftPressed = false;
 let rightPressed = false;
 
@@ -48,19 +45,19 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") leftPressed = true;
   if (e.key === "ArrowRight") rightPressed = true;
 });
+
 document.addEventListener("keyup", (e) => {
   if (e.key === "ArrowLeft") leftPressed = false;
   if (e.key === "ArrowRight") rightPressed = false;
 });
 
 function createNote() {
-    const laneX = lanes[Math.floor(Math.random() * lanes.length)];
-    notes.push({
-      x: laneX,
-      y: -noteRadius
-    });
-  }
-  
+  const laneX = lanes[Math.floor(Math.random() * lanes.length)];
+  notes.push({
+    x: laneX,
+    y: -noteRadius
+  });
+}
 
 function isColliding(note) {
   return (
@@ -72,14 +69,9 @@ function isColliding(note) {
 }
 
 function update() {
-  // Move giraffe
   if (leftPressed && giraffe.x > 0) giraffe.x -= giraffe.speed;
   if (rightPressed && giraffe.x < canvas.width - giraffe.width) giraffe.x += giraffe.speed;
 
-  // Spawn notes
-  if (Math.random() < 0.02) createNote();
-
-  // Move notes
   for (let i = 0; i < notes.length; i++) {
     notes[i].y += noteSpeed;
 
@@ -94,26 +86,21 @@ function update() {
   }
 }
 
-// Load giraffe image
-const giraffeImg = new Image();
-giraffeImg.src = "giraffe.png";
-
-giraffeImg.onload = () => {
-  loop(); // Start the game loop after image is ready
-};
-
 function draw() {
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.3)";
-    ctx.lineWidth = 2;
-    for (let i = 1; i < laneCount; i++) {
-        ctx.beginPath();
-        ctx.moveTo(i * laneWidth, 0);
-        ctx.lineTo(i * laneWidth, canvas.height);
-        ctx.stroke();
-    }
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Draw giraffe image
+  // Optional: Draw lane lines
+  ctx.strokeStyle = "rgba(255, 255, 255, 0.3)";
+  ctx.lineWidth = 2;
+  for (let i = 0; i <= laneCount; i++) {
+    const x = startX + i * laneWidth;
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, canvas.height);
+    ctx.stroke();
+  }
+
+  // Draw giraffe
   ctx.drawImage(giraffeImg, giraffe.x, giraffe.y, giraffe.width, giraffe.height);
 
   // Draw notes
@@ -143,4 +130,17 @@ function loop(timestamp) {
   requestAnimationFrame(loop);
 }
 
-loop();
+// 🎧 Start music + beat manager on key press
+let musicStarted = false;
+document.addEventListener("keydown", () => {
+  if (!musicStarted) {
+    musicStarted = true;
+    setupBeatManager("bg-music.mp3", () => {
+      createNote();
+    });
+  }
+});
+
+giraffeImg.onload = () => {
+  loop();
+};
