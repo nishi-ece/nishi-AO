@@ -16,6 +16,14 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+const laneCount = 4;
+const laneWidth = canvas.width / laneCount;
+
+const lanes = [];
+for (let i = 0; i < laneCount; i++) {
+  lanes.push(i * laneWidth + laneWidth / 2);
+}
+
 // Giraffe player
 const giraffe = {
   x: canvas.width / 2 - 50,
@@ -46,11 +54,13 @@ document.addEventListener("keyup", (e) => {
 });
 
 function createNote() {
-  notes.push({
-    x: Math.random() * (canvas.width - noteRadius * 2),
-    y: -noteRadius
-  });
-}
+    const laneX = lanes[Math.floor(Math.random() * lanes.length)];
+    notes.push({
+      x: laneX,
+      y: -noteRadius
+    });
+  }
+  
 
 function isColliding(note) {
   return (
@@ -93,6 +103,13 @@ giraffeImg.onload = () => {
 };
 
 function draw() {
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.3)";
+    ctx.lineWidth = 2;
+    for (let i = 1; i < laneCount; i++) {
+        ctx.beginPath();
+        ctx.moveTo(i * laneWidth, 0);
+        ctx.lineTo(i * laneWidth, canvas.height);
+        ctx.stroke();
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   // Draw giraffe image
