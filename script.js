@@ -72,15 +72,22 @@ function update() {
   }
 }
 
+// Load giraffe image
+const giraffeImg = new Image();
+giraffeImg.src = "giraffe.png";
+
+giraffeImg.onload = () => {
+  loop(); // Start the game loop after image is ready
+};
+
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Draw giraffe
-  ctx.fillStyle = "#FFD700"; // yellow
-  ctx.fillRect(giraffe.x, giraffe.y, giraffe.width, giraffe.height);
+  // Draw giraffe image
+  ctx.drawImage(giraffeImg, giraffe.x, giraffe.y, giraffe.width, giraffe.height);
 
   // Draw notes
-  ctx.fillStyle = "#800080"; // purple
+  ctx.fillStyle = "#800080";
   notes.forEach((note) => {
     ctx.beginPath();
     ctx.arc(note.x, note.y, noteRadius, 0, Math.PI * 2);
