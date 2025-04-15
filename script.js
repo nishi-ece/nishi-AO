@@ -5,20 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatToggle = document.getElementById("chatToggle");
     const chatbot = document.getElementById("chatbot");
   
-    // Toggle chatbot visibility
     chatToggle.addEventListener("click", () => {
       chatbot.classList.toggle("hidden");
       input.focus();
     });
   
-    // Send message on button click
     sendBtn.addEventListener("click", sendMessage);
-  
-    // Send message on Enter key
     input.addEventListener("keypress", function (e) {
-      if (e.key === "Enter") {
-        sendMessage();
-      }
+      if (e.key === "Enter") sendMessage();
     });
   
     function sendMessage() {
@@ -37,25 +31,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   
     function getBotResponse(msg) {
-      let response = "Hmm... I didn't catch that. Try asking about experience, skills, or hobbies!";
+      let response = "Hmm... Try asking about experience, skills, or hobbies!";
+      if (msg.includes("name")) response = "I'm Nishi's assistant. 😊";
+      else if (msg.includes("experience")) response = "3+ years at TCS with Middleware and Automation.";
+      else if (msg.includes("skills")) response = "Ansible, Docker, WebLogic, Jenkins, GitHub, etc.";
+      else if (msg.includes("contact")) response = "Email: nishisheeba196@gmail.com";
+      else if (msg.includes("hobbies")) response = "Art, music, literature 🎨🎶📚";
+      else if (msg.includes("hello") || msg.includes("hi")) response = "Hey there! 👋";
   
-      if (msg.includes("name")) {
-        response = "I'm Nishi's assistant. Nice to meet you!";
-      } else if (msg.includes("experience")) {
-        response = "Nishi has 3+ years of experience in Middleware and Automation with Ansible at TCS.";
-      } else if (msg.includes("skills")) {
-        response = "She’s skilled in Ansible, Docker, Jenkins, Oracle WebLogic, and more!";
-      } else if (msg.includes("contact")) {
-        response = "You can reach her at nishisheeba196@gmail.com 📧";
-      } else if (msg.includes("hobbies") || msg.includes("interests")) {
-        response = "She loves art, music, and literature 🎨🎶📚";
-      } else if (msg.includes("hi") || msg.includes("hello")) {
-        response = "Hey there! 👋 How can I help you today?";
-      }
-  
-      setTimeout(() => {
-        appendMessage("Bot: " + response);
-      }, 400);
+      setTimeout(() => appendMessage("Bot: " + response), 400);
     }
   });
   
