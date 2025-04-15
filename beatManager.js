@@ -19,7 +19,7 @@ export async function setupBeatManager(audioUrl, onBeatCallback) {
     gain.connect(context.destination);
   
     const data = new Uint8Array(analyser.frequencyBinCount);
-    let beatHoldTime = 30, beatDecayRate = 0.98, beatMin = 0.2;
+    let beatHoldTime = 30, beatDecayRate = 0.98, beatMin = 0.15;
     let beatCutOff = 0, beatTime = 0;
   
     function detectBeat() {

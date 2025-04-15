@@ -23,13 +23,13 @@ const giraffe = {
   y: canvas.height - 120,
   width: 100,
   height: 100,
-  speed: 6
+  speed: 8
 };
 
 // Notes
 const notes = [];
 const noteRadius = 20;
-const noteSpeed = 4;
+const noteSpeed = 6;
 
 let score = 0;
 
