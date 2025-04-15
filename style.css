@@ -92,4 +92,38 @@ body {
   @keyframes blink {
     50% { border-color: transparent; }
   }
+
+  #chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  #chatbox {
+    background: #f4f4f4;
+    border: 2px solid #1abc9c;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  #messages {
+    height: 200px;
+    overflow-y: auto;
+    font-size: 14px;
+    padding: 5px;
+  }
+  
+  #messages div {
+    margin: 5px 0;
+  }
+  
+  #userInput {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
   
