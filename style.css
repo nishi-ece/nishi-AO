@@ -34,7 +34,6 @@ body {
     }
   }
 
-  
   nav ul {
     list-style: none;
     display: flex;
@@ -112,14 +111,15 @@ body {
     right: 20px;
     width: 300px;
     font-family: 'Segoe UI', sans-serif;
+    z-index: 999;
   }
   
   #chatbox {
-    background: #f4f4f4;
+    background: #ffffff;
     border: 2px solid #1abc9c;
     border-radius: 8px;
-    padding: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 10px;
   }
   
   #messages {
@@ -127,6 +127,7 @@ body {
     overflow-y: auto;
     font-size: 14px;
     padding: 5px;
+    color: #333;
   }
   
   #messages div {
@@ -136,7 +137,7 @@ body {
   #userInput {
     width: 100%;
     padding: 8px;
-    border: none;
-    border-top: 1px solid #ccc;
-  }
-  
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }  
