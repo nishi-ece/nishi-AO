@@ -147,4 +147,83 @@ body {
   #sendBtn:hover {
     background-color: #16a085;
   }
+
+  /* Chat Toggle Button */
+#chatToggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  /* Chat Box Styling */
+  #chatbot.hidden {
+    display: none;
+  }
+  
+  #chatbot {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 300px;
+    font-family: 'Segoe UI', sans-serif;
+    z-index: 999;
+  }
+  
+  #chatbox {
+    background: #ffffff;
+    border: 2px solid #1abc9c;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 10px;
+  }
+  
+  #messages {
+    height: 200px;
+    overflow-y: auto;
+    font-size: 14px;
+    padding: 5px;
+    color: #333;
+  }
+  
+  #messages div {
+    margin: 5px 0;
+  }
+  
+  .input-row {
+    display: flex;
+    gap: 5px;
+    margin-top: 8px;
+  }
+  
+  #userInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  #sendBtn {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 0 14px;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #sendBtn:hover {
+    background-color: #16a085;
+  }
   

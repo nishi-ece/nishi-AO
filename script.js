@@ -5,17 +5,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatToggle = document.getElementById("chatToggle");
     const chatbot = document.getElementById("chatbot");
   
-    // Toggle Chatbot
+    // Toggle chatbot visibility
     chatToggle.addEventListener("click", () => {
       chatbot.classList.toggle("hidden");
+      input.focus();
     });
   
     // Send message on button click
     sendBtn.addEventListener("click", sendMessage);
   
-    // Optional: send on Enter
+    // Send message on Enter key
     input.addEventListener("keypress", function (e) {
-      if (e.key === "Enter") sendMessage();
+      if (e.key === "Enter") {
+        sendMessage();
+      }
     });
   
     function sendMessage() {
@@ -52,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       setTimeout(() => {
         appendMessage("Bot: " + response);
-      }, 500);
+      }, 400);
     }
   });
   
