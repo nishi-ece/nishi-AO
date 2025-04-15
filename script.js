@@ -1,3 +1,15 @@
+// Load background music
+const bgMusic = new Audio("bg-music.mp3");
+bgMusic.loop = true;
+bgMusic.volume = 0.4; // optional: make it less loud
+
+// Play after user interaction (required on some browsers)
+document.addEventListener("keydown", () => {
+  if (bgMusic.paused) {
+    bgMusic.play();
+  }
+});
+
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
