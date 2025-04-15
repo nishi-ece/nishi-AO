@@ -3,19 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Work & Hobbies</title>
+  <title>Work Experience & Hobbies</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <nav>
-      <div class="logo">
-        <svg id="logo-svg" viewBox="0 0 300 60">
-            <text x="0" y="40" fill="none" stroke="#1abc9c" stroke-width="1" font-size="40" font-family="Segoe UI">
-                Nishi Sheeba
-            </text>
-        </svg>
-      </div>
+      <div class="logo">Nishi Sheeba</div>
       <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="work.html">Work Experience</a></li>
@@ -24,21 +18,31 @@
     </nav>
   </header>
 
-  <main class="content fade-in slide-up">
-    <section class="slide-up">
+  <main class="content slide-up">
     <h1>Work Experience</h1>
-      <p><strong>System Engineer – TCS (Jun 2021 - Aug 2024)</strong></p>
-      <ul>
-        <li>Led middleware service transition and optimization.</li>
-        <li>Automated certificate renewals & server monitoring (400+ servers).</li>
-        <li>Red Hat Certified in Ansible. Recognized as "Star Performer" twice.</li>
-        <li>Contributed to team culture through event organization.</li>
-      </ul>
+    <p><strong>System Engineer – TCS (June 2021 - August 2024)</strong></p>
+    <ul>
+      <li>Handled middleware services during transition from another vendor.</li>
+      <li>Led automation for certificate renewals & server health checks (400+ servers).</li>
+      <li>Red Hat Certified in Ansible; developed reusable automation templates.</li>
+      <li>Twice recognized as "Star Performer" and featured in "Wall of Fame".</li>
+    </ul>
 
-      <h2>Hobbies & Interests</h2>
-      <p>I’m deeply passionate about art, music, and literature. Outside work, I enjoy creating visual art and exploring creative hobbies that fuel my imagination.</p>
-    </section>
+    <h2>Hobbies & Interests</h2>
+    <p>Passionate about art, music, and literature. I enjoy creating, curating, and collaborating on creative ideas in my free time 🎨🎶📚</p>
   </main>
+
+  <!-- Chatbot -->
+  <button id="chatToggle" title="Chat with me!">💬</button>
+  <div id="chatbot" class="hidden">
+    <div id="chatbox">
+      <div id="messages"></div>
+      <div class="input-row">
+        <input type="text" id="userInput" placeholder="Ask me something..." />
+        <button id="sendBtn" title="Send">&#10148;</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

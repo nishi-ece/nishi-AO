@@ -6,17 +6,10 @@
   <title>Nishi Sheeba | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-  
 <body>
   <header>
     <nav>
-      <div class="logo">
-        <svg id="logo-svg" viewBox="0 0 300 60">
-            <text x="0" y="40" fill="none" stroke="#1abc9c" stroke-width="1" font-size="40" font-family="Segoe UI">
-                Nishi Sheeba
-            </text>
-        </svg>
-      </div>
+      <div class="logo">Nishi Sheeba</div>
       <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="work.html">Work Experience</a></li>
@@ -25,29 +18,24 @@
     </nav>
   </header>
 
-  <main class="content fade-in slide-up">
+  <main class="content slide-up">
     <h1 class="typing">About Me</h1>
-    <section class="about slide-up">
-        <p>Hi, I'm <strong>Nishi Sheeba</strong>, a Middleware and Automation Engineer with 3+ years of experience in middleware services, automation using Ansible, and optimizing backend systems for efficiency.</p>
-        <p>I thrive on solving complex problems, driving innovation, and contributing to collaborative environments. I’m also certified in Ansible by Red Hat and known for consistent high performance at TCS.</p>
-    </section>
+    <p>Hi, I'm <strong>Nishi Sheeba</strong>, a Middleware and Automation Engineer with 3+ years of experience in middleware services, automation using Ansible, and optimizing backend systems for efficiency.</p>
+    <p>Certified by Red Hat in Ansible and known for my consistent performance at TCS, I love solving problems and automating things to make life easier!</p>
   </main>
 
-  <!-- Chat Toggle Button -->
-    <button id="chatToggle" title="Chat with me!">💬</button>
-
-    <!-- Chatbot Box -->
-    <div id="chatbot" class="hidden">
+  <!-- Chatbot (Same for all pages) -->
+  <button id="chatToggle" title="Chat with me!">💬</button>
+  <div id="chatbot" class="hidden">
     <div id="chatbox">
-        <div id="messages"></div>
-        <div class="input-row">
+      <div id="messages"></div>
+      <div class="input-row">
         <input type="text" id="userInput" placeholder="Ask me something..." />
         <button id="sendBtn" title="Send">&#10148;</button>
-        </div>
+      </div>
     </div>
-    </div>
+  </div>
 
-    <!-- Link to JS -->
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
