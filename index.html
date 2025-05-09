@@ -65,8 +65,26 @@
       display: none;
       max-width: 100%;
       height: auto;
+      position: relative;
+      animation: fallDown 1s ease-out forwards;
+      transform: translateY(-150%);
+      opacity: 0;
     }
 
+    @keyframes fallDown {
+      0% {
+        transform: translateY(-150%);
+        opacity: 0;
+      }
+      80% {
+        transform: translateY(10%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
     #download-btn {
       margin-top: 20px;
       display: none;
@@ -155,14 +173,19 @@
     }
 
     function createPolaroidStrip() {
-      images.forEach((img, i) => {
-        pctx.putImageData(img, 0, i * 260);
-        // Add white bottom border
-        pctx.fillStyle = 'white';
-        pctx.fillRect(0, i * 260 + 240, 320, 20);
-      });
-      polaroid.style.display = 'block';
-    }
+     images.forEach((img, i) => {
+     pctx.putImageData(img, 0, i * 260);
+    // Add white bottom border
+     pctx.fillStyle = 'white';
+     pctx.fillRect(0, i * 260 + 240, 320, 20);
+    });
+
+  // Reset animation
+     polaroid.style.display = 'none';
+     void polaroid.offsetWidth; // trigger reflow to restart animation
+     polaroid.style.display = 'block';
+     downloadBtn.style.display = 'inline-block';
+   }
 
     function downloadImage() {
       const link = document.createElement('a');
