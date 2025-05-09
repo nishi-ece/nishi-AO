@@ -1,21 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Giraffe Catch Game</title>
+  <meta charset="UTF-8">
+  <title>Vintage Photo Booth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
+      font-family: 'Courier New', monospace;
+      background: #fefaf6;
+      color: #333;
+      text-align: center;
+      padding: 20px;
       margin: 0;
-      overflow: hidden;
     }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #4a3d35;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #6b574b;
+    }
+
+    #video {
+      display: none;
+      border: 5px solid #3a2e28;
+      filter: sepia(1);
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      margin: 10px 0;
+    }
+
+    #countdown {
+      font-size: 3em;
+      margin: 20px 0;
+    }
+
     canvas {
-      display: block;
-      background-color: #87CEEB;
+      display: none;
+    }
+
+    #polaroid {
+      margin-top: 20px;
+      background: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      border: 10px solid white;
+      display: none;
+      max-width: 100%;
+      height: auto;
+    }
+
+    #download-btn {
+      margin-top: 20px;
+      display: none;
     }
   </style>
 </head>
 <body>
-  <canvas id="gameCanvas"></canvas>
-  <script type="module" src="./script.js"></script>
+
+  <div id="instructions">
+    <h1>Vintage Photo Booth</h1>
+    <p>Tap the button to start. The camera will take 3 vintage photos with a countdown!</p>
+    <button onclick="startBooth()">Take Picture</button>
+  </div>
+
+  <div id="countdown"></div>
+  <video id="video" autoplay playsinline></video>
+  <canvas id="canvas" width="320" height="240"></canvas>
+  <canvas id="polaroid" width="320" height="780"></canvas>
+
+  <button id="download-btn" onclick="downloadImage()">Download Photo Strip</button>
+
+  <script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const polaroid = document.getElementById('polaroid');
+    const pctx = polaroid.getContext('2d');
+    const countdown = document.getElementById('countdown');
+    const instructions = document.getElementById('instructions');
+    const downloadBtn = document.getElementById('download-btn');
+
+    let images = [];
+
+    async function startBooth() {
+      instructions.style.display = 'none';
+      video.style.display = 'block';
+
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } });
+        video.srcObject = stream;
+        setTimeout(() => takePicture(0), 2000);
+      } catch (error) {
+        alert("Camera access is required.");
+      }
+    }
+
+    function takePicture(index) {
+      let count = 3;
+      countdown.innerText = count;
+
+      const countdownInterval = setInterval(() => {
+        count--;
+        if (count === 0) {
+          clearInterval(countdownInterval);
+          countdown.innerText = '';
+
+          // Draw sepia-filtered image from video
+          ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+          let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          applySepia(imageData.data);
+          ctx.putImageData(imageData, 0, 0);
+          images.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+
+          if (index < 2) {
+            setTimeout(() => takePicture(index + 1), 1000);
+          } else {
+            createPolaroidStrip();
+            video.style.display = 'none';
+            downloadBtn.style.display = 'inline-block';
+          }
+        } else {
+          countdown.innerText = count;
+        }
+      }, 1000);
+    }
+
+    function applySepia(data) {
+      for (let i = 0; i < data.length; i += 4) {
+        let r = data[i];
+        let g = data[i+1];
+        let b = data[i+2];
+        data[i] = Math.min(0.393*r + 0.769*g + 0.189*b, 255);
+        data[i+1] = Math.min(0.349*r + 0.686*g + 0.168*b, 255);
+        data[i+2] = Math.min(0.272*r + 0.534*g + 0.131*b, 255);
+      }
+    }
+
+    function createPolaroidStrip() {
+      images.forEach((img, i) => {
+        pctx.putImageData(img, 0, i * 260);
+        // Add white bottom border
+        pctx.fillStyle = 'white';
+        pctx.fillRect(0, i * 260 + 240, 320, 20);
+      });
+      polaroid.style.display = 'block';
+    }
+
+    function downloadImage() {
+      const link = document.createElement('a');
+      link.download = 'vintage-photo-strip.png';
+      link.href = polaroid.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+
 </body>
 </html>
