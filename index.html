@@ -42,6 +42,7 @@
       display: none;
       border: 5px solid #3a2e28;
       filter: sepia(1);
+      transform: scaleX(-1); /* Mirror for user view */
       width: 100%;
       max-width: 320px;
       height: auto;
@@ -85,6 +86,7 @@
         opacity: 1;
       }
     }
+
     #download-btn {
       margin-top: 20px;
       display: none;
@@ -101,8 +103,8 @@
 
   <div id="countdown"></div>
   <video id="video" autoplay playsinline></video>
-  <canvas id="canvas" width="320" height="240"></canvas>
-  <canvas id="polaroid" width="320" height="780"></canvas>
+  <canvas id="canvas"></canvas>
+  <canvas id="polaroid"></canvas>
 
   <button id="download-btn" onclick="downloadImage()">Download Photo Strip</button>
 
@@ -117,17 +119,36 @@
     const downloadBtn = document.getElementById('download-btn');
 
     let images = [];
+    let imageWidth = 320;
+    let imageHeight = 240;
 
     async function startBooth() {
       instructions.style.display = 'none';
       video.style.display = 'block';
 
       try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } });
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: {
+            facingMode: "user",
+            width: { ideal: 640 },
+            height: { ideal: 480 },
+            aspectRatio: 4/3
+          }
+        });
+
         video.srcObject = stream;
-        setTimeout(() => takePicture(0), 2000);
-      } catch (error) {
-        alert("Camera access is required.");
+
+        video.onloadedmetadata = () => {
+          imageWidth = video.videoWidth;
+          imageHeight = video.videoHeight;
+          canvas.width = imageWidth;
+          canvas.height = imageHeight;
+          polaroid.width = imageWidth;
+          polaroid.height = imageHeight * 3 + 60;
+          setTimeout(() => takePicture(0), 2000);
+        };
+      } catch (err) {
+        alert("Unable to access camera.");
       }
     }
 
@@ -141,12 +162,16 @@
           clearInterval(countdownInterval);
           countdown.innerText = '';
 
-          // Draw sepia-filtered image from video
-          ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-          let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          // Unmirror and draw image
+          ctx.save();
+          ctx.scale(-1, 1);
+          ctx.drawImage(video, -imageWidth, 0, imageWidth, imageHeight);
+          ctx.restore();
+
+          let imageData = ctx.getImageData(0, 0, imageWidth, imageHeight);
           applySepia(imageData.data);
           ctx.putImageData(imageData, 0, 0);
-          images.push(ctx.getImageData(0, 0, canvas.width, canvas.height));
+          images.push(ctx.getImageData(0, 0, imageWidth, imageHeight));
 
           if (index < 2) {
             setTimeout(() => takePicture(index + 1), 1000);
@@ -173,19 +198,16 @@
     }
 
     function createPolaroidStrip() {
-     images.forEach((img, i) => {
-     pctx.putImageData(img, 0, i * 260);
-    // Add white bottom border
-     pctx.fillStyle = 'white';
-     pctx.fillRect(0, i * 260 + 240, 320, 20);
-    });
+      images.forEach((img, i) => {
+        pctx.putImageData(img, 0, i * (imageHeight + 20));
+        pctx.fillStyle = 'white';
+        pctx.fillRect(0, i * (imageHeight + 20) + imageHeight, imageWidth, 20);
+      });
 
-  // Reset animation
-     polaroid.style.display = 'none';
-     void polaroid.offsetWidth; // trigger reflow to restart animation
-     polaroid.style.display = 'block';
-     downloadBtn.style.display = 'inline-block';
-   }
+      polaroid.style.display = 'none';
+      void polaroid.offsetWidth; // Reset animation
+      polaroid.style.display = 'block';
+    }
 
     function downloadImage() {
       const link = document.createElement('a');
