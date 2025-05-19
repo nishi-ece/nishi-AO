@@ -14,7 +14,6 @@
       color: white;
       text-align: center;
       height: 100%;
-      overflow: hidden;
     }
 
     #instructions {
@@ -22,7 +21,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100%;
+      height: 100vh;
       padding: 20px;
     }
 
@@ -44,8 +43,7 @@
 
     #video-container {
       display: none;
-      height: 100%;
-      display: flex;
+      height: 100vh;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -56,7 +54,6 @@
       transform: scaleX(-1);
       width: 90%;
       max-width: 360px;
-      height: auto;
       border-radius: 10px;
     }
 
@@ -69,17 +66,13 @@
       display: none;
     }
 
-    /* FINAL PAGE: Scrollable with buttons below strip */
     #polaroid-container {
       display: none;
-      max-height: 100vh;
-      overflow-y: auto;
-      padding: 20px 10px;
-      background: #fecaca;
-      display: flex;
       flex-direction: column;
       align-items: center;
-      animation: dropIn 1s ease-out;
+      padding: 20px;
+      height: 100vh;
+      overflow-y: auto;
     }
 
     @keyframes dropIn {
@@ -98,9 +91,7 @@
       border-radius: 12px;
       padding: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      position: relative;
-      margin-bottom: 15px;
-      max-width: 90vw;
+      animation: dropIn 1s ease-out;
     }
 
     #polaroid {
@@ -111,7 +102,7 @@
 
     #text-input {
       position: absolute;
-      bottom: 15px;
+      bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
       width: 90%;
@@ -139,20 +130,17 @@
     }
 
     #final-buttons {
-      margin-top: 10px;
+      margin-top: 15px;
       display: flex;
       gap: 10px;
       justify-content: center;
-      width: 100%;
+      flex-wrap: wrap;
     }
 
     footer {
-      position: fixed;
-      bottom: 6px;
-      width: 100%;
+      margin-top: 20px;
       font-size: 0.6em;
       color: white;
-      text-align: center;
     }
   </style>
 </head>
@@ -171,7 +159,6 @@
   </div>
 
   <canvas id="canvas"></canvas>
-  <canvas id="polaroid"></canvas>
 
   <div id="polaroid-container">
     <div id="polaroid-wrapper">
@@ -182,15 +169,14 @@
       <button onclick="downloadImage()">⬇️ Download</button>
       <button onclick="location.reload()">🔄 Restart</button>
     </div>
+    <footer>© Nishi Sheebs</footer>
   </div>
-
-  <footer>© Nishi Sheebs</footer>
 
   <script>
     const video = document.getElementById('video');
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    const polaroid = document.querySelectorAll('#polaroid')[1];
+    const polaroid = document.getElementById('polaroid');
     const pctx = polaroid.getContext('2d');
     const countdown = document.getElementById('countdown');
     const instructions = document.getElementById('instructions');
@@ -211,8 +197,7 @@
           video: {
             facingMode: "user",
             width: { ideal: 640 },
-            height: { ideal: 480 },
-            aspectRatio: 4 / 3
+            height: { ideal: 480 }
           }
         });
 
@@ -224,7 +209,7 @@
           canvas.width = imageWidth;
           canvas.height = imageHeight;
           polaroid.width = imageWidth;
-          polaroid.height = (imageHeight + 20) * 3 + 80; // 3 photos + spacing + writing area
+          polaroid.height = (imageHeight + 20) * 3 + 80;
           setTimeout(() => takePicture(0), 1000);
         };
       } catch (err) {
@@ -256,9 +241,7 @@
             setTimeout(() => takePicture(index + 1), 1000);
           } else {
             createPolaroidStrip();
-            let tracks = video.srcObject.getTracks();
-            tracks.forEach(track => track.stop());
-            video.srcObject = null;
+            video.srcObject.getTracks().forEach(track => track.stop());
             videoContainer.style.display = 'none';
           }
         } else {
@@ -297,25 +280,9 @@
     function downloadImage() {
       const message = textInput.value.trim();
 
-      // Clear and redraw polaroid to avoid multiple writes
-      pctx.clearRect(0, 0, polaroid.width, polaroid.height);
-
-      // Re-draw photos and timestamps
-      images.forEach((img, i) => {
-        const y = i * (imageHeight + 20);
-        pctx.putImageData(img, 0, y);
-        pctx.fillStyle = 'white';
-        pctx.fillRect(0, y + imageHeight, imageWidth, 20);
-        pctx.fillStyle = 'black';
-        pctx.font = "12px monospace";
-        pctx.fillText(new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString(), 10, y + imageHeight + 15);
-      });
-
-      // White space area for writing
       pctx.fillStyle = 'white';
       pctx.fillRect(0, polaroid.height - 60, imageWidth, 60);
 
-      // Draw the message typed by user
       if (message) {
         pctx.fillStyle = 'black';
         pctx.font = "10px monospace";
@@ -323,7 +290,7 @@
       }
 
       const link = document.createElement('a');
-      link.download = 'bw-photo-strip.png';
+      link.download = 'photo-strip.png';
       link.href = polaroid.toDataURL('image/png');
       link.click();
     }
