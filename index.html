@@ -44,14 +44,19 @@
 
     #video-container {
       display: none;
-      margin: 10px auto;
-      max-width: 90%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     #video {
       filter: grayscale(1);
       transform: scaleX(-1);
-      width: 100%;
+      width: 90%;
+      max-width: 360px;
+      height: auto;
       border-radius: 10px;
     }
 
@@ -66,26 +71,38 @@
 
     #polaroid-container {
       display: none;
-      margin-top: 20px;
+      height: 100%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
-      gap: 20px;
-      flex-wrap: wrap;
+      align-items: center;
+      animation: dropIn 1s ease-out;
+    }
+
+    @keyframes dropIn {
+      0% {
+        transform: translateY(-100%) rotate(-5deg) scale(0.6);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0) rotate(-2deg) scale(0.6);
+        opacity: 1;
+      }
     }
 
     #polaroid-wrapper {
-      transform: rotate(-3deg) scale(0.65);
-      transform-origin: top center;
       background: white;
       border-radius: 12px;
       padding: 10px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.4);
       position: relative;
+      margin-bottom: 10px;
     }
 
     #polaroid {
       display: block;
+      max-width: 90vw;
+      height: auto;
     }
 
     #text-input {
@@ -117,9 +134,17 @@
       50% { transform: translateY(-5px); }
     }
 
+    #final-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
     footer {
       position: fixed;
-      bottom: 10px;
+      bottom: 6px;
       width: 100%;
       font-size: 0.6em;
       color: white;
@@ -149,7 +174,7 @@
       <canvas id="polaroid"></canvas>
       <textarea id="text-input" placeholder="Write something cute..."></textarea>
     </div>
-    <div>
+    <div id="final-buttons">
       <button onclick="downloadImage()">⬇️ Download</button>
       <button onclick="location.reload()">🔄 Restart</button>
     </div>
@@ -175,7 +200,7 @@
 
     async function startBooth() {
       instructions.style.display = 'none';
-      videoContainer.style.display = 'block';
+      videoContainer.style.display = 'flex';
 
       try {
         const stream = await navigator.mediaDevices.getUserMedia({
@@ -266,7 +291,6 @@
     }
 
     function downloadImage() {
-      // Temporarily draw the message into the canvas before downloading
       const message = textInput.value.trim();
       if (message) {
         pctx.fillStyle = 'black';
