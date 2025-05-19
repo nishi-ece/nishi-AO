@@ -4,32 +4,37 @@
   <meta charset="UTF-8">
   <title>Vintage Photo Booth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Retro font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  
   <style>
     body {
-      font-family: 'Courier New', monospace;
+      font-family: 'Press Start 2P', cursive;
       background: #fefaf6;
-      color: #333;
+      color: #3a2e28;
       text-align: center;
       padding: 20px;
       margin: 0;
     }
 
     h1 {
-      font-size: 2em;
+      font-size: 1.5em;
       margin-bottom: 10px;
     }
 
     p {
-      font-size: 1.1em;
+      font-size: 0.8em;
       margin-bottom: 20px;
+      padding: 0 10px;
     }
 
     button {
       background-color: #4a3d35;
       color: white;
       border: none;
-      padding: 12px 24px;
-      font-size: 1em;
+      padding: 12px 20px;
+      font-size: 0.75em;
       border-radius: 5px;
       cursor: pointer;
     }
@@ -42,20 +47,21 @@
       display: none;
       border: 5px solid #3a2e28;
       filter: sepia(1);
-      transform: scaleX(-1); /* Mirror for user view */
+      transform: scaleX(-1); /* Mirror preview */
       width: 100%;
       max-width: 320px;
       height: auto;
-      margin: 10px 0;
+      margin: 20px auto;
     }
 
     #countdown {
-      font-size: 3em;
+      font-size: 2em;
       margin: 20px 0;
     }
 
     canvas {
       display: none;
+      margin: 0 auto;
     }
 
     #polaroid {
@@ -96,8 +102,8 @@
 <body>
 
   <div id="instructions">
-    <h1>Vintage Photo Booth</h1>
-    <p>Tap the button to start. The camera will take 3 vintage photos with a countdown!</p>
+    <h1>📸 Vintage Photo Booth</h1>
+    <p>Tap to start. We'll take 3 retro-style shots with a countdown. Say cheese!</p>
     <button onclick="startBooth()">Take Picture</button>
   </div>
 
@@ -132,7 +138,7 @@
             facingMode: "user",
             width: { ideal: 640 },
             height: { ideal: 480 },
-            aspectRatio: 4/3
+            aspectRatio: 4 / 3
           }
         });
 
@@ -177,6 +183,12 @@
             setTimeout(() => takePicture(index + 1), 1000);
           } else {
             createPolaroidStrip();
+
+            // Stop the camera stream
+            let tracks = video.srcObject.getTracks();
+            tracks.forEach(track => track.stop());
+            video.srcObject = null;
+
             video.style.display = 'none';
             downloadBtn.style.display = 'inline-block';
           }
@@ -205,7 +217,7 @@
       });
 
       polaroid.style.display = 'none';
-      void polaroid.offsetWidth; // Reset animation
+      void polaroid.offsetWidth; // trigger reflow to restart animation
       polaroid.style.display = 'block';
     }
 
