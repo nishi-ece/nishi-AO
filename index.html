@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vintage Photo Booth</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <style>
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
-      font-family: 'Press Start 2P', cursive;
       background-color: #fecaca;
+      font-family: 'Press Start 2P', cursive;
       color: white;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
+      height: 100%;
+      overflow: hidden;
     }
 
     #instructions {
-      margin-top: auto;
-      margin-bottom: auto;
-      max-width: 90%;
-    }
-
-    h1 {
-      font-size: 1.2em;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 0.7em;
-      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 20px;
     }
 
     button {
       background-color: #b87e7e;
       color: white;
       border: none;
-      padding: 15px 25px;
+      padding: 12px 20px;
       font-size: 0.7em;
+      margin: 8px;
       border-radius: 6px;
       cursor: pointer;
-      margin: 5px;
       font-family: 'Press Start 2P', cursive;
     }
 
@@ -53,24 +43,15 @@
     }
 
     #video-container {
-      margin: 20px auto;
-      max-width: 360px;
-      position: relative;
       display: none;
-    }
-
-    #video-frame {
-      padding: 10px;
-      background-color: transparent;
-      border-radius: 12px;
+      margin: 10px auto;
+      max-width: 90%;
     }
 
     #video {
-      display: none;
       filter: grayscale(1);
       transform: scaleX(-1);
       width: 100%;
-      height: auto;
       border-radius: 10px;
     }
 
@@ -81,43 +62,48 @@
 
     canvas {
       display: none;
-      margin: 0 auto;
+    }
+
+    #polaroid-container {
+      display: none;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    #polaroid-wrapper {
+      transform: rotate(-3deg) scale(0.65);
+      transform-origin: top center;
+      background: white;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      position: relative;
     }
 
     #polaroid {
-      margin-top: 20px;
+      display: block;
+    }
+
+    #text-input {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      text-align: center;
+      border: none;
+      border-top: 1px dashed #999;
       background: white;
-      display: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      padding: 10px;
-      border-radius: 12px;
-      animation: fallDown 1s ease-out forwards;
-      transform: translateY(-150%);
-      opacity: 0;
-      transform-origin: top center;
-      max-width: 90%;
-      height: auto;
-      scale: 0.85;
-    }
-
-    @keyframes fallDown {
-      0% {
-        transform: translateY(-150%) scale(0.85);
-        opacity: 0;
-      }
-      80% {
-        transform: translateY(10%) scale(0.85);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(0) scale(0.85);
-        opacity: 1;
-      }
-    }
-
-    #download-btn, #restart-btn {
-      margin-top: 20px;
-      display: none;
+      padding: 5px 0;
+      color: black;
+      resize: none;
+      height: 40px;
     }
 
     .pointer {
@@ -132,10 +118,12 @@
     }
 
     footer {
-      margin-top: auto;
-      padding: 10px;
+      position: fixed;
+      bottom: 10px;
+      width: 100%;
       font-size: 0.6em;
       color: white;
+      text-align: center;
     }
   </style>
 </head>
@@ -150,17 +138,21 @@
   <div id="countdown"></div>
 
   <div id="video-container">
-    <div id="video-frame">
-      <video id="video" autoplay playsinline></video>
-    </div>
+    <video id="video" autoplay playsinline></video>
   </div>
 
   <canvas id="canvas"></canvas>
   <canvas id="polaroid"></canvas>
 
-  <div>
-    <button id="download-btn" onclick="downloadImage()">⬇️ Download Strip</button>
-    <button id="restart-btn" onclick="location.reload()">🔄 Restart</button>
+  <div id="polaroid-container">
+    <div id="polaroid-wrapper">
+      <canvas id="polaroid"></canvas>
+      <textarea id="text-input" placeholder="Write something cute..."></textarea>
+    </div>
+    <div>
+      <button onclick="downloadImage()">⬇️ Download</button>
+      <button onclick="location.reload()">🔄 Restart</button>
+    </div>
   </div>
 
   <footer>© Nishi Sheebs</footer>
@@ -173,9 +165,9 @@
     const pctx = polaroid.getContext('2d');
     const countdown = document.getElementById('countdown');
     const instructions = document.getElementById('instructions');
-    const downloadBtn = document.getElementById('download-btn');
-    const restartBtn = document.getElementById('restart-btn');
     const videoContainer = document.getElementById('video-container');
+    const polaroidContainer = document.getElementById('polaroid-container');
+    const textInput = document.getElementById('text-input');
 
     let images = [];
     let imageWidth = 320;
@@ -183,7 +175,6 @@
 
     async function startBooth() {
       instructions.style.display = 'none';
-      video.style.display = 'block';
       videoContainer.style.display = 'block';
 
       try {
@@ -205,8 +196,7 @@
           canvas.height = imageHeight;
           polaroid.width = imageWidth;
           polaroid.height = (imageHeight + 20) * 3 + 80;
-
-          setTimeout(() => takePicture(0), 2000);
+          setTimeout(() => takePicture(0), 1000);
         };
       } catch (err) {
         alert("Unable to access camera.");
@@ -237,15 +227,10 @@
             setTimeout(() => takePicture(index + 1), 1000);
           } else {
             createPolaroidStrip();
-
             let tracks = video.srcObject.getTracks();
             tracks.forEach(track => track.stop());
             video.srcObject = null;
-
-            video.style.display = 'none';
             videoContainer.style.display = 'none';
-            downloadBtn.style.display = 'inline-block';
-            restartBtn.style.display = 'inline-block';
           }
         } else {
           countdown.innerText = count;
@@ -255,7 +240,7 @@
 
     function applyGrayscale(data) {
       for (let i = 0; i < data.length; i += 4) {
-        let avg = (data[i] + data[i+1] + data[i+2]) / 3;
+        const avg = (data[i] + data[i+1] + data[i+2]) / 3;
         data[i] = data[i+1] = data[i+2] = avg;
       }
     }
@@ -274,25 +259,26 @@
         pctx.fillText(timestamp, 10, y + imageHeight + 15);
       });
 
-      // Extra white space for a note
       pctx.fillStyle = 'white';
       pctx.fillRect(0, polaroid.height - 60, imageWidth, 60);
-      pctx.fillStyle = 'black';
-      pctx.font = "10px monospace";
-      pctx.fillText("Write your cute message here 💌", 10, polaroid.height - 35);
 
-      polaroid.style.display = 'none';
-      void polaroid.offsetWidth;
-      polaroid.style.display = 'block';
+      polaroidContainer.style.display = 'flex';
     }
 
     function downloadImage() {
+      // Temporarily draw the message into the canvas before downloading
+      const message = textInput.value.trim();
+      if (message) {
+        pctx.fillStyle = 'black';
+        pctx.font = "10px monospace";
+        pctx.fillText(message, 10, polaroid.height - 20);
+      }
+
       const link = document.createElement('a');
       link.download = 'bw-photo-strip.png';
       link.href = polaroid.toDataURL('image/png');
       link.click();
     }
   </script>
-
 </body>
 </html>
