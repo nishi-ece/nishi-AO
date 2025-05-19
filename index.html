@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <title>Vintage Photo Booth</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <!-- Retro font -->
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  
+
   <style>
     body {
       font-family: 'Press Start 2P', cursive;
-      background: #fefaf6;
-      color: #3a2e28;
+      background-color: #fecaca;
+      color: white;
       text-align: center;
       padding: 20px;
       margin: 0;
@@ -24,13 +24,13 @@
     }
 
     p {
-      font-size: 0.8em;
+      font-size: 0.75em;
       margin-bottom: 20px;
       padding: 0 10px;
     }
 
     button {
-      background-color: #4a3d35;
+      background-color: #b87e7e;
       color: white;
       border: none;
       padding: 12px 20px;
@@ -40,18 +40,48 @@
     }
 
     button:hover {
-      background-color: #6b574b;
+      background-color: #a16c6c;
+    }
+
+    #video-container {
+      margin: 20px auto;
+      max-width: 360px;
+      position: relative;
+      font-size: 2rem;
+    }
+
+    #video-frame {
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .video-wrapper::before {
+      content: '💗💖';
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+    }
+
+    .video-wrapper::after {
+      content: '💖💗';
+      position: absolute;
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
     }
 
     #video {
       display: none;
-      border: 5px solid #3a2e28;
-      filter: sepia(1);
-      transform: scaleX(-1); /* Mirror preview */
+      filter: grayscale(1);
+      transform: scaleX(-1);
       width: 100%;
-      max-width: 320px;
       height: auto;
-      margin: 20px auto;
+      border-radius: 10px;
     }
 
     #countdown {
@@ -66,13 +96,13 @@
 
     #polaroid {
       margin-top: 20px;
-      background: white;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      border: 10px solid white;
+      background: #fecaca;
       display: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      padding: 10px;
+      border-radius: 12px;
       max-width: 100%;
       height: auto;
-      position: relative;
       animation: fallDown 1s ease-out forwards;
       transform: translateY(-150%);
       opacity: 0;
@@ -97,18 +127,35 @@
       margin-top: 20px;
       display: none;
     }
+
+    .pointer {
+      font-size: 1.2em;
+      margin-left: 8px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
   </style>
 </head>
 <body>
 
   <div id="instructions">
     <h1>📸 Vintage Photo Booth</h1>
-    <p>Tap to start. We'll take 3 retro-style shots with a countdown. Say cheese!</p>
-    <button onclick="startBooth()">Take Picture</button>
+    <p>Get ready to pose! We'll take 3 black-and-white shots with a countdown. Tap below to begin.</p>
+    <button onclick="startBooth()">📸 Take Picture <span class="pointer">👉</span></button>
   </div>
 
   <div id="countdown"></div>
-  <video id="video" autoplay playsinline></video>
+
+  <div id="video-container" class="video-wrapper">
+    <div id="video-frame">
+      <video id="video" autoplay playsinline></video>
+    </div>
+  </div>
+
   <canvas id="canvas"></canvas>
   <canvas id="polaroid"></canvas>
 
@@ -168,14 +215,13 @@
           clearInterval(countdownInterval);
           countdown.innerText = '';
 
-          // Unmirror and draw image
           ctx.save();
           ctx.scale(-1, 1);
           ctx.drawImage(video, -imageWidth, 0, imageWidth, imageHeight);
           ctx.restore();
 
           let imageData = ctx.getImageData(0, 0, imageWidth, imageHeight);
-          applySepia(imageData.data);
+          applyGrayscale(imageData.data);
           ctx.putImageData(imageData, 0, 0);
           images.push(ctx.getImageData(0, 0, imageWidth, imageHeight));
 
@@ -184,7 +230,6 @@
           } else {
             createPolaroidStrip();
 
-            // Stop the camera stream
             let tracks = video.srcObject.getTracks();
             tracks.forEach(track => track.stop());
             video.srcObject = null;
@@ -198,32 +243,28 @@
       }, 1000);
     }
 
-    function applySepia(data) {
+    function applyGrayscale(data) {
       for (let i = 0; i < data.length; i += 4) {
-        let r = data[i];
-        let g = data[i+1];
-        let b = data[i+2];
-        data[i] = Math.min(0.393*r + 0.769*g + 0.189*b, 255);
-        data[i+1] = Math.min(0.349*r + 0.686*g + 0.168*b, 255);
-        data[i+2] = Math.min(0.272*r + 0.534*g + 0.131*b, 255);
+        let avg = (data[i] + data[i+1] + data[i+2]) / 3;
+        data[i] = data[i+1] = data[i+2] = avg;
       }
     }
 
     function createPolaroidStrip() {
       images.forEach((img, i) => {
         pctx.putImageData(img, 0, i * (imageHeight + 20));
-        pctx.fillStyle = 'white';
+        pctx.fillStyle = '#fecaca';
         pctx.fillRect(0, i * (imageHeight + 20) + imageHeight, imageWidth, 20);
       });
 
       polaroid.style.display = 'none';
-      void polaroid.offsetWidth; // trigger reflow to restart animation
+      void polaroid.offsetWidth; // trigger reflow
       polaroid.style.display = 'block';
     }
 
     function downloadImage() {
       const link = document.createElement('a');
-      link.download = 'vintage-photo-strip.png';
+      link.download = 'bw-photo-strip.png';
       link.href = polaroid.toDataURL('image/png');
       link.click();
     }
