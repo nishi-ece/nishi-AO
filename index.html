@@ -31,7 +31,6 @@
 
     button {
       background-color: #b87e7e;
-      font-family: 'Press Start 2P', cursive;
       color: white;
       border: none;
       padding: 12px 20px;
@@ -48,7 +47,6 @@
       margin: 20px auto;
       max-width: 360px;
       position: relative;
-      font-size: 2rem;
     }
 
     #video-frame {
@@ -79,7 +77,7 @@
 
     #polaroid {
       margin-top: 20px;
-      background: #fecaca;
+      background: white;
       display: none;
       box-shadow: 0 5px 15px rgba(0,0,0,0.4);
       padding: 10px;
@@ -133,7 +131,7 @@
 
   <div id="countdown"></div>
 
-  <div id="video-container" class="video-wrapper">
+  <div id="video-container">
     <div id="video-frame">
       <video id="video" autoplay playsinline></video>
     </div>
@@ -236,7 +234,7 @@
     function createPolaroidStrip() {
       images.forEach((img, i) => {
         pctx.putImageData(img, 0, i * (imageHeight + 20));
-        pctx.fillStyle = '#fecaca';
+        pctx.fillStyle = 'white';
         pctx.fillRect(0, i * (imageHeight + 20) + imageHeight, imageWidth, 20);
       });
 
