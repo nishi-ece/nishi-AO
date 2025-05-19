@@ -7,155 +7,162 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
-      background-color: #fecaca;
-      font-family: 'Press Start 2P', cursive;
-      color: white;
-      text-align: center;
-    }
+  margin: 0;
+  padding: 0;
+  background-color: #fecaca;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  text-align: center;
+}
 
-    h1 {
-      margin-top: 20px;
-      font-size: 1rem;
-    }
+h1 {
+  margin: 8px 0 0 0;
+  font-size: 1rem;
+}
 
-    #instructions {
-      padding: 20px;
-    }
+#instructions {
+  padding: 10px 0 0 0; /* Less padding */
+  margin: 0;
+}
 
-    ul {
-      list-style-type: none;
-      padding: 0;
-      font-size: 10px;
-      line-height: 1.8;
-    }
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.8;
+}
 
-    ul li::before {
-      content: "✨ ";
-    }
+ul li::before {
+  content: "✨ ";
+}
 
-    button {
-      background-color: #b87e7e;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 0.7em;
-      margin: 8px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: 'Press Start 2P', cursive;
-    }
+button {
+  background-color: #b87e7e;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 0.7em;
+  margin: 6px 0 0 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+}
 
-    button:hover {
-      background-color: #a16c6c;
-    }
+button:hover {
+  background-color: #a16c6c;
+}
 
-    select {
-      padding: 8px;
-      font-family: 'Press Start 2P', cursive;
-      font-size: 0.6em;
-      margin-top: 10px;
-    }
+select {
+  padding: 6px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.6em;
+  margin-top: 4px;
+}
 
-    #video-container {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+#video-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
 
-    #video {
-      transform: scaleX(-1);
-      width: 90%;
-      max-width: 360px;
-      border-radius: 10px;
-    }
+#video {
+  transform: scaleX(-1);
+  width: 90%;
+  max-width: 360px;
+  border-radius: 10px;
+}
 
-    #countdown {
-      font-size: 2em;
-      margin: 20px 0;
-    }
+#countdown {
+  font-size: 2em;
+  margin: 4px 0;
+}
 
-    #polaroid-container {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
+#polaroid-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 0; /* Remove extra padding */
+  margin: 0;
+}
 
-    #polaroid-wrapper {
-      background: white;
-      border-radius: 12px;
-      padding: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      animation: dropIn 1s ease-out;
-      transform: scale(0.6) rotate(-2deg);
-      max-width: 90%;
-    }
+#polaroid-wrapper {
+  background: white;
+  border-radius: 12px;
+  padding: 6px; /* Less padding */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  animation: dropIn 1s ease-out;
+  transform: scale(0.6) rotate(-2deg);
+  max-width: 90%;
+  margin: 0; /* No margin */
+}
 
-    canvas {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-    @keyframes dropIn {
-      0% {
-        transform: translateY(-100%) rotate(-5deg) scale(0.6);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0) rotate(-2deg) scale(0.6);
-        opacity: 1;
-      }
-    }
+@keyframes dropIn {
+  0% {
+    transform: translateY(-100%) rotate(-5deg) scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(-2deg) scale(0.6);
+    opacity: 1;
+  }
+}
 
-    #final-controls {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+#final-controls {
+  margin: 0; /* Remove top margin */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px; /* Minimal gap */
+}
 
-    #filter-final {
-      margin-bottom: 10px;
-    }
+#filter-final {
+  margin-bottom: 4px;
+}
 
-    #user-message {
-      width: 90%;
-      padding: 8px;
-      border: 1px dashed #b87e7e;
-      font-family: 'Press Start 2P', cursive;
-      font-size: 10px;
-      resize: none;
-      height: 50px;
-      margin-bottom: 10px;
-    }
+#user-message {
+  width: 90%;
+  padding: 4px;
+  border: 1px dashed #b87e7e;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  resize: none;
+  height: 36px;
+  margin-bottom: 4px;
+}
 
-    .pointer {
-      font-size: 1.2em;
-      margin-left: 8px;
-      animation: bounce 1s infinite;
-    }
+.pointer {
+  font-size: 1.2em;
+  margin-left: 8px;
+  animation: bounce 1s infinite;
+}
 
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
 
-    .button-group {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+.button-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    footer {
-      margin-top: 20px;
-      font-size: 0.6em;
-      color: white;
-    }
+footer {
+  margin-top: 4px;
+  font-size: 0.6em;
+  color: white;
+}
+
   </style>
 </head>
 <body>
