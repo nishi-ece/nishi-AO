@@ -9,13 +9,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
       font-family: 'Press Start 2P', cursive;
       background-color: #fecaca;
       color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      padding: 20px;
-      margin: 0;
+    }
+
+    #instructions {
+      margin-top: auto;
+      margin-bottom: auto;
+      max-width: 90%;
     }
 
     h1 {
@@ -26,7 +36,6 @@
     p {
       font-size: 0.75em;
       margin-bottom: 20px;
-      padding: 0 10px;
     }
 
     button {
@@ -37,6 +46,7 @@
       font-size: 0.75em;
       border-radius: 5px;
       cursor: pointer;
+      margin: 5px;
     }
 
     button:hover {
@@ -47,13 +57,13 @@
       margin: 20px auto;
       max-width: 360px;
       position: relative;
+      display: none;
     }
 
     #video-frame {
       padding: 10px;
-      background-color: #fff;
+      background-color: transparent;
       border-radius: 12px;
-      position: relative;
     }
 
     #video {
@@ -104,7 +114,7 @@
       }
     }
 
-    #download-btn {
+    #download-btn, #restart-btn {
       margin-top: 20px;
       display: none;
     }
@@ -118,6 +128,26 @@
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-5px); }
+    }
+
+    textarea {
+      margin-top: 20px;
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      height: 80px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.6em;
+      border-radius: 6px;
+      border: none;
+      resize: none;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 10px;
+      font-size: 0.6em;
+      color: white;
     }
   </style>
 </head>
@@ -140,7 +170,14 @@
   <canvas id="canvas"></canvas>
   <canvas id="polaroid"></canvas>
 
-  <button id="download-btn" onclick="downloadImage()">Download Photo Strip</button>
+  <textarea placeholder="Write something cute here 💬 (optional)"></textarea>
+
+  <div>
+    <button id="download-btn" onclick="downloadImage()">Download Photo Strip</button>
+    <button id="restart-btn" onclick="location.reload()">🔄 Restart</button>
+  </div>
+
+  <footer>© Nishi Sheebs</footer>
 
   <script>
     const video = document.getElementById('video');
@@ -151,6 +188,8 @@
     const countdown = document.getElementById('countdown');
     const instructions = document.getElementById('instructions');
     const downloadBtn = document.getElementById('download-btn');
+    const restartBtn = document.getElementById('restart-btn');
+    const videoContainer = document.getElementById('video-container');
 
     let images = [];
     let imageWidth = 320;
@@ -159,6 +198,7 @@
     async function startBooth() {
       instructions.style.display = 'none';
       video.style.display = 'block';
+      videoContainer.style.display = 'block';
 
       try {
         const stream = await navigator.mediaDevices.getUserMedia({
@@ -178,7 +218,7 @@
           canvas.width = imageWidth;
           canvas.height = imageHeight;
           polaroid.width = imageWidth;
-          polaroid.height = imageHeight * 3 + 60;
+          polaroid.height = (imageHeight + 20) * 3 + 60; // extra for notes
           setTimeout(() => takePicture(0), 2000);
         };
       } catch (err) {
@@ -216,7 +256,9 @@
             video.srcObject = null;
 
             video.style.display = 'none';
+            videoContainer.style.display = 'none';
             downloadBtn.style.display = 'inline-block';
+            restartBtn.style.display = 'inline-block';
           }
         } else {
           countdown.innerText = count;
@@ -232,10 +274,17 @@
     }
 
     function createPolaroidStrip() {
+      const now = new Date();
+      const timestamp = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+
       images.forEach((img, i) => {
-        pctx.putImageData(img, 0, i * (imageHeight + 20));
+        const y = i * (imageHeight + 20);
+        pctx.putImageData(img, 0, y);
         pctx.fillStyle = 'white';
-        pctx.fillRect(0, i * (imageHeight + 20) + imageHeight, imageWidth, 20);
+        pctx.fillRect(0, y + imageHeight, imageWidth, 20);
+        pctx.fillStyle = 'black';
+        pctx.font = "12px monospace";
+        pctx.fillText(timestamp, 10, y + imageHeight + 15);
       });
 
       polaroid.style.display = 'none';
