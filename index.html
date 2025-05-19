@@ -92,6 +92,7 @@
       animation: dropIn 1s ease-out;
       transform: scale(0.6) rotate(-2deg);
       max-width: 90%;
+      margin-top: 20px; /* Added margin to push it down from the heading */
     }
 
     canvas {
@@ -112,36 +113,30 @@
     }
 
     #final-controls {
-      margin-top: 10px;
+      margin-top: 20px; /* Added margin to create space between the strip and controls */
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 90%; /* Added width to align with the polaroid */
+      max-width: 360px; /* Added max-width to align with the polaroid */
     }
 
     #filter-final {
       margin-bottom: 10px;
+      width: 100%; /* Make the select box take full width */
+      padding: 10px; /* Slightly increased padding for better touch feel */
+      font-size: 0.7em; /* Adjust font size to fit better */
     }
 
     #user-message {
-      width: 90%;
-      padding: 8px;
+      width: 100%;
+      padding: 10px;
       border: 1px dashed #b87e7e;
       font-family: 'Press Start 2P', cursive;
-      font-size: 10px;
+      font-size: 0.7em;
       resize: none;
-      height: 50px;
+      height: 60px; /* Slightly increased height */
       margin-bottom: 10px;
-    }
-
-    .pointer {
-      font-size: 1.2em;
-      margin-left: 8px;
-      animation: bounce 1s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
     }
 
     .button-group {
@@ -149,6 +144,13 @@
       gap: 10px;
       flex-wrap: wrap;
       justify-content: center;
+      width: 100%; /* Make the button group take full width */
+    }
+
+    .button-group button {
+      flex-grow: 1; /* Distribute space evenly among buttons */
+      padding: 10px 15px; /* Slightly reduced padding */
+      font-size: 0.6em; /* Adjust font size to fit better */
     }
 
     footer {
