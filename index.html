@@ -1,328 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Photo Booth by Nishi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background-color: #fecaca;
-      font-family: 'Press Start 2P', cursive;
-      color: white;
-      text-align: center;
-      height: 100%;
-    }
-
-    h1 {
-      margin-top: 20px;
-      font-size: 1rem;
-    }
-
-    #instructions {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    ul li::before {
-      content: "🎀 ";
-    }
-
-    button {
-      background-color: #b87e7e;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 0.7em;
-      margin: 8px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-family: 'Press Start 2P', cursive;
-    }
-
-    button:hover {
-      background-color: #a16c6c;
-    }
-
-    select {
-      padding: 8px;
-      font-family: 'Press Start 2P', cursive;
-      font-size: 0.6em;
-      margin-top: 10px;
-    }
-
-    #video-container {
-      display: none;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #video {
-      transform: scaleX(-1);
-      width: 90%;
-      max-width: 360px;
-      border-radius: 10px;
-    }
-
-    #countdown {
-      font-size: 2em;
-      margin: 20px 0;
-    }
-
-    #polaroid-container {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      height: 100vh;
-      overflow-y: auto;
-    }
-
-    #polaroid-wrapper {
-      background: white;
-      border-radius: 12px;
-      padding: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      animation: dropIn 1s ease-out;
-      transform: scale(0.6) rotate(-2deg);
-    }
-
-    canvas {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    @keyframes dropIn {
-      0% {
-        transform: translateY(-100%) rotate(-5deg) scale(0.6);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0) rotate(-2deg) scale(0.6);
-        opacity: 1;
-      }
-    }
-
-    #message-box {
-      margin-top: 10px;
-      width: 90%;
-    }
-
-    #user-message {
-      width: 100%;
-      padding: 8px;
-      border: 1px dashed #b87e7e;
-      font-family: 'Press Start 2P', cursive;
-      font-size: 10px;
-      resize: none;
-      height: 50px;
-    }
-
-    .pointer {
-      font-size: 1.2em;
-      margin-left: 8px;
-      animation: bounce 1s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-    }
-
-    #final-buttons {
-      margin-top: 15px;
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    footer {
-      margin-top: 20px;
-      font-size: 0.6em;
-      color: white;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Photobooth App with Emoji Stickers</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0; padding: 0; background: #f5f8ff;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  h1 {
+    margin: 20px 0 10px 0;
+    color: #333;
+  }
+  #page1, #page2, #page3 {
+    width: 320px;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  #page1 {
+    text-align: center;
+  }
+  #page1 input[type=file] {
+    margin: 10px 0;
+  }
+  #photoStrip {
+    position: relative;
+    width: 300px;
+    height: 240px;
+    margin: 10px auto;
+    border: 2px solid #aaa;
+    background: #eee;
+    overflow: hidden;
+    border-radius: 6px;
+  }
+  #photoStrip img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    margin: 4px 2px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+  }
+  #stickersLayer {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: auto;
+  }
+  #emojiPalette {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .emoji {
+    font-size: 26px;
+    cursor: grab;
+    user-select: none;
+  }
+  .sticker {
+    position: absolute;
+    font-size: 26px;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+  }
+  .dragging {
+    cursor: grabbing !important;
+  }
+  #filters {
+    margin-top: 10px;
+    text-align: center;
+  }
+  select {
+    padding: 4px;
+    font-size: 14px;
+  }
+  #textInput {
+    width: 90%;
+    margin: 8px auto;
+    display: block;
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+  }
+  button {
+    margin: 8px 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background: #4a90e2;
+    color: white;
+    transition: background 0.3s;
+  }
+  button:hover {
+    background: #357ab8;
+  }
+</style>
 </head>
 <body>
 
-  <h1>📸 Photobooth by Nishi 💖</h1>
+<h1>Photobooth App</h1>
 
-  <div id="instructions">
-    <ul>
-      <li>Get ready to take 3 photos with countdowns</li>
-      <li>Choose your favorite filter look</li>
-      <li>Pose, smile, and save your custom Polaroid strip!</li>
-    </ul>
-    <label for="filter">Choose your filter:</label><br>
-    <select id="filter">
-      <option value="normal">Normal</option>
-      <option value="sepia">Sepia</option>
-      <option value="bw">Black & White</option>
-    </select><br><br>
-    <button onclick="startBooth()">📸 Take Picture <span class="pointer">👉</span></button>
+<!-- Page 1: Upload photos -->
+<div id="page1">
+  <h2>Upload up to 3 photos</h2>
+  <input type="file" id="fileInput" accept="image/*" multiple />
+  <div id="photoStrip"></div>
+  <button id="toPage2Btn">Next: Add Stickers</button>
+</div>
+
+<!-- Page 2: Stickers and filters -->
+<div id="page2" style="display:none;">
+  <h2>Add Emoji Stickers & Filters</h2>
+  <div id="photoStrip" style="position:relative; width:300px; height:240px; margin:auto; border:2px solid #aaa; background:#eee; border-radius:6px; overflow:hidden;">
+    <div id="stickersLayer"></div>
   </div>
-
-  <div id="countdown"></div>
-
-  <div id="video-container">
-    <video id="video" autoplay playsinline></video>
+  <div id="filters">
+    <label for="filterSelect">Filter: </label>
+    <select id="filterSelect">
+      <option value="none">None</option>
+      <option value="grayscale(100%)">Grayscale</option>
+      <option value="sepia(60%)">Sepia</option>
+      <option value="contrast(150%)">High Contrast</option>
+      <option value="brightness(120%)">Brighten</option>
+      <option value="blur(2px)">Blur</option>
+    </select>
   </div>
-
-  <canvas id="canvas" style="display:none;"></canvas>
-
-  <div id="polaroid-container">
-    <div id="polaroid-wrapper">
-      <canvas id="polaroid"></canvas>
-    </div>
-
-    <div id="message-box">
-      <textarea id="user-message" placeholder="Write something cute here..."></textarea>
-    </div>
-
-    <div id="final-buttons">
-      <button onclick="downloadImage()">⬇️ Download</button>
-      <button onclick="location.reload()">🔄 Restart</button>
-    </div>
-    <footer>© Nishi Sheebs</footer>
+  <div id="emojiPalette" title="Drag emojis onto the photos">
+    <!-- Emojis inserted by JS -->
   </div>
+  <button id="toPage3Btn">Next: Add Text & Download</button>
+  <button id="backToPage1Btn">Back</button>
+</div>
 
-  <script>
-    const video = document.getElementById('video');
-    const canvas = document.getElementById('canvas');
+<!-- Page 3: Add text and download -->
+<div id="page3" style="display:none;">
+  <h2>Add Text & Download</h2>
+  <div id="photoStrip" style="position:relative; width:300px; height:240px; margin:auto; border:2px solid #aaa; background:#eee; border-radius:6px; overflow:hidden;">
+    <div id="stickersLayer"></div>
+  </div>
+  <input type="text" id="textInput" placeholder="Enter caption or message here" maxlength="50" />
+  <div style="text-align:center;">
+    <button id="downloadBtn">Download Image</button>
+    <button id="backToPage2Btn">Back</button>
+  </div>
+</div>
+
+<script>
+  // Elements
+  const fileInput = document.getElementById('fileInput');
+  const photoStripPage1 = document.querySelector('#page1 #photoStrip');
+  const photoStripPage2 = document.querySelector('#page2 #photoStrip');
+  const photoStripPage3 = document.querySelector('#page3 #photoStrip');
+  const stickersLayerPage2 = document.querySelector('#page2 #stickersLayer');
+  const stickersLayerPage3 = document.querySelector('#page3 #stickersLayer');
+  const filterSelect = document.getElementById('filterSelect');
+  const emojiPalette = document.getElementById('emojiPalette');
+  const textInput = document.getElementById('textInput');
+  const downloadBtn = document.getElementById('downloadBtn');
+
+  // Pages and buttons
+  const page1 = document.getElementById('page1');
+  const page2 = document.getElementById('page2');
+  const page3 = document.getElementById('page3');
+  const toPage2Btn = document.getElementById('toPage2Btn');
+  const toPage3Btn = document.getElementById('toPage3Btn');
+  const backToPage1Btn = document.getElementById('backToPage1Btn');
+  const backToPage2Btn = document.getElementById('backToPage2Btn');
+
+  let uploadedImages = [];
+  let emojis = ['💖','💙','🤍','🌸','✨','💫','🎀','❄️','🎉','💡','💌','💎','⭐','🎈']; // Pink, blue, white themed emojis
+
+  // Helper: Clear children
+  function clearChildren(element) {
+    while (element.firstChild) {
+      element.removeChild(element.firstChild);
+    }
+  }
+
+  // Load photos to page 1 strip
+  fileInput.addEventListener('change', (e) => {
+    const files = e.target.files;
+    if (files.length > 3) {
+      alert('Please upload up to 3 photos only.');
+      fileInput.value = '';
+      return;
+    }
+    uploadedImages = [];
+    clearChildren(photoStripPage1);
+    for (let i=0; i < files.length; i++) {
+      const file = files[i];
+      const img = document.createElement('img');
+      img.file = file;
+      photoStripPage1.appendChild(img);
+
+      const reader = new FileReader();
+      reader.onload = ((aImg) => (e) => {
+        aImg.src = e.target.result;
+        uploadedImages.push(e.target.result);
+      })(img);
+      reader.readAsDataURL(file);
+    }
+  });
+
+  // Move to page 2
+  toPage2Btn.addEventListener('click', () => {
+    if (uploadedImages.length === 0) {
+      alert('Please upload at least one photo to continue.');
+      return;
+    }
+    page1.style.display = 'none';
+    page2.style.display = 'block';
+    page3.style.display = 'none';
+
+    // Load images into page 2 photo strip with stickersLayer
+    clearChildren(photoStripPage2);
+    clearChildren(stickersLayerPage2);
+
+    uploadedImages.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.style.margin = '4px 2px';
+      img.style.width = '100px';
+      img.style.height = '140px';
+      img.style.objectFit = 'cover';
+      img.style.borderRadius = '4px';
+      photoStripPage2.appendChild(img);
+    });
+
+    // Copy stickers from previous page3 if any
+    clearChildren(stickersLayerPage2);
+
+    // Reset filter
+    photoStripPage2.style.filter = 'none';
+    filterSelect.value = 'none';
+
+    // Populate emoji palette
+    clearChildren(emojiPalette);
+    emojis.forEach(emoji => {
+      const span = document.createElement('span');
+      span.textContent = emoji;
+      span.className = 'emoji';
+      span.title = "Drag me!";
+      span.addEventListener('mousedown', (e) => {
+        e.preventDefault();
+        const sticker = createEmojiSticker(emoji);
+        const rect = stickersLayerPage2.getBoundingClientRect();
+        sticker.style.left = (e.clientX - rect.left - 14) + 'px';
+        sticker.style.top = (e.clientY - rect.top - 14) + 'px';
+        stickersLayerPage2.appendChild(sticker);
+      });
+      span.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        const touch = e.touches[0];
+        const rect = stickersLayerPage2.getBoundingClientRect();
+        const sticker = createEmojiSticker(emoji);
+        sticker.style.left = (touch.clientX - rect.left - 14) + 'px';
+        sticker.style.top = (touch.clientY - rect.top - 14) + 'px';
+        stickersLayerPage2.appendChild(sticker);
+      }, { passive: false });
+      emojiPalette.appendChild(span);
+    });
+  });
+
+  // Move to page 3
+  toPage3Btn.addEventListener('click', () => {
+    page1.style.display = 'none';
+    page2.style.display = 'none';
+    page3.style.display = 'block';
+
+    // Show photos with stickers on page3
+    clearChildren(photoStripPage3);
+    clearChildren(stickersLayerPage3);
+
+    uploadedImages.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.style.margin = '4px 2px';
+      img.style.width = '100px';
+      img.style.height = '140px';
+      img.style.objectFit = 'cover';
+      img.style.borderRadius = '4px';
+      photoStripPage3.appendChild(img);
+    });
+
+    // Copy stickers from page 2 to page 3
+    stickersLayerPage2.querySelectorAll('.sticker').forEach(sticker => {
+      const clone = sticker.cloneNode(true);
+      stickersLayerPage3.appendChild(clone);
+      addDragHandlers(clone, stickersLayerPage3);
+    });
+
+    // Apply filter from page 2
+    photoStripPage3.style.filter = photoStripPage2.style.filter;
+
+    // Clear text input
+    textInput.value = '';
+  });
+
+  backToPage1Btn.addEventListener('click', () => {
+    page1.style.display = 'block';
+    page2.style.display = 'none';
+    page3.style.display = 'none';
+  });
+
+  backToPage2Btn.addEventListener('click', () => {
+    page1.style.display = 'none';
+    page2.style.display = 'block';
+    page3.style.display = 'none';
+  });
+
+  // Filter change
+  filterSelect.addEventListener('change', (e) => {
+    photoStripPage2.style.filter = e.target.value;
+  });
+
+  // Create draggable emoji sticker element
+  function createEmojiSticker(emoji) {
+    const span = document.createElement('span');
+    span.textContent = emoji;
+    span.className = 'sticker';
+    span.style.left = '10px';
+    span.style.top = '10px';
+    addDragHandlers(span, stickersLayerPage2);
+    return span;
+  }
+
+  // Add drag handlers to a sticker
+  function addDragHandlers(element, container) {
+    let dragging = false;
+    let offsetX, offsetY;
+
+    element.addEventListener('mousedown', (e) => {
+      dragging = true;
+      offsetX = e.clientX - element.offsetLeft;
+      offsetY = e.clientY - element.offsetTop;
+      element.classList.add('dragging');
+      e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (dragging) {
+        let left = e.clientX - offsetX;
+        let top = e.clientY - offsetY;
+        left = Math.min(Math.max(left, 0), container.clientWidth - element.offsetWidth);
+        top = Math.min(Math.max(top, 0), container.clientHeight - element.offsetHeight);
+        element.style.left = left + 'px';
+        element.style.top = top + 'px';
+      }
+    });
+
+    document.addEventListener('mouseup', () => {
+      if (dragging) {
+        dragging = false;
+        element.classList.remove('dragging');
+      }
+    });
+
+    // Touch support
+    element.addEventListener('touchstart', (e) => {
+      dragging = true;
+      const touch = e.touches[0];
+      offsetX = touch.clientX - element.offsetLeft;
+      offsetY = touch.clientY - element.offsetTop;
+      element.classList.add('dragging');
+      e.preventDefault();
+    }, { passive: false });
+
+    document.addEventListener('touchmove', (e) => {
+      if (dragging) {
+        const touch = e.touches[0];
+        let left = touch.clientX - offsetX;
+        let top = touch.clientY - offsetY;
+        left = Math.min(Math.max(left, 0), container.clientWidth - element.offsetWidth);
+        top = Math.min(Math.max(top, 0), container.clientHeight - element.offsetHeight);
+        element.style.left = left + 'px';
+        element.style.top = top + 'px';
+      }
+    }, { passive: false });
+
+    document.addEventListener('touchend', () => {
+      if (dragging) {
+        dragging = false;
+        element.classList.remove('dragging');
+      }
+    });
+  }
+
+  // Add drag handlers to stickers on page 3 as well (for clones)
+  stickersLayerPage3.addEventListener('mousedown', e => {
+    if (e.target.classList.contains('sticker')) {
+      addDragHandlers(e.target, stickersLayerPage3);
+    }
+  });
+
+  // Download button logic: merge photos, stickers, and text
+  downloadBtn.addEventListener('click', () => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 300;
+    canvas.height = 240;
     const ctx = canvas.getContext('2d');
-    const polaroid = document.getElementById('polaroid');
-    const pctx = polaroid.getContext('2d');
-    const countdown = document.getElementById('countdown');
-    const instructions = document.getElementById('instructions');
-    const videoContainer = document.getElementById('video-container');
-    const polaroidContainer = document.getElementById('polaroid-container');
-    const userMessage = document.getElementById('user-message');
-    const filterSelect = document.getElementById('filter');
 
-    let images = [];
-    let imageWidth = 320;
-    let imageHeight = 240;
-    let selectedFilter = 'normal';
+    // Clear
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    async function startBooth() {
-      selectedFilter = filterSelect.value;
-      instructions.style.display = 'none';
-      videoContainer.style.display = 'flex';
-
-      try {
-        const stream = await navigator.mediaDevices.getUserMedia({
-          video: { facingMode: "user", width: { ideal: 640 }, height: { ideal: 480 } }
-        });
-
-        video.srcObject = stream;
-
-        video.onloadedmetadata = () => {
-          imageWidth = video.videoWidth;
-          imageHeight = video.videoHeight;
-          canvas.width = imageWidth;
-          canvas.height = imageHeight;
-          polaroid.width = imageWidth;
-          polaroid.height = (imageHeight + 20) * 3 + 60;
-          setTimeout(() => takePicture(0), 1000);
-        };
-      } catch (err) {
-        alert("Unable to access camera.");
-      }
-    }
-
-    function takePicture(index) {
-      let count = 3;
-      countdown.innerText = count;
-
-      const countdownInterval = setInterval(() => {
-        count--;
-        if (count === 0) {
-          clearInterval(countdownInterval);
-          countdown.innerText = '';
-
-          ctx.save();
-          ctx.scale(-1, 1);
-          ctx.drawImage(video, -imageWidth, 0, imageWidth, imageHeight);
-          ctx.restore();
-
-          let imageData = ctx.getImageData(0, 0, imageWidth, imageHeight);
-          applyFilter(imageData.data);
-          ctx.putImageData(imageData, 0, 0);
-          images.push(ctx.getImageData(0, 0, imageWidth, imageHeight));
-
-          if (index < 2) {
-            setTimeout(() => takePicture(index + 1), 1000);
-          } else {
-            createPolaroidStrip();
-            video.srcObject.getTracks().forEach(track => track.stop());
-            videoContainer.style.display = 'none';
-          }
-        } else {
-          countdown.innerText = count;
+    // Draw photos side by side
+    const photoWidth = 100;
+    const photoHeight = 140;
+    uploadedImages.forEach((src, i) => {
+      const img = new Image();
+      img.src = src;
+      // We have to wait for all images to load before drawing
+      img.onload = () => {
+        ctx.drawImage(img, i*photoWidth + 2, 4, photoWidth - 4, photoHeight);
+        // After last image loaded, draw stickers and text
+        if (i === uploadedImages.length -1) {
+          drawStickersAndText();
         }
-      }, 1000);
+      };
+    });
+
+    // If no images (should not happen), still draw stickers/text
+    if (uploadedImages.length === 0) {
+      drawStickersAndText();
     }
 
-    function applyFilter(data) {
-      for (let i = 0; i < data.length; i += 4) {
-        let r = data[i], g = data[i + 1], b = data[i + 2];
-        if (selectedFilter === 'bw') {
-          const avg = (r + g + b) / 3;
-          data[i] = data[i+1] = data[i+2] = avg;
-        } else if (selectedFilter === 'sepia') {
-          data[i]     = (r * .393) + (g * .769) + (b * .189);
-          data[i + 1] = (r * .349) + (g * .686) + (b * .168);
-          data[i + 2] = (r * .272) + (g * .534) + (b * .131);
-        }
-      }
-    }
-
-    function createPolaroidStrip() {
-      const now = new Date();
-      const timestamp = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
-
-      images.forEach((img, i) => {
-        const y = i * (imageHeight + 20);
-        pctx.putImageData(img, 0, y);
-        pctx.fillStyle = 'white';
-        pctx.fillRect(0, y + imageHeight, imageWidth, 20);
-        pctx.fillStyle = 'black';
-        pctx.font = "12px monospace";
-        pctx.fillText(timestamp, 10, y + imageHeight + 15);
+    // Draw stickers and text on canvas
+    function drawStickersAndText() {
+      // Draw stickers
+      const stickers = stickersLayerPage3.querySelectorAll('.sticker');
+      stickers.forEach(sticker => {
+        const style = window.getComputedStyle(sticker);
+        const fontSize = parseInt(style.fontSize);
+        const left = parseFloat(sticker.style.left);
+        const top = parseFloat(sticker.style.top);
+        ctx.font = fontSize + "px serif";
+        ctx.fillText(sticker.textContent, left, top + fontSize);
       });
 
-      polaroidContainer.style.display = 'flex';
-    }
-
-    function downloadImage() {
-      const message = userMessage.value.trim();
-
-      pctx.fillStyle = 'white';
-      pctx.fillRect(0, polaroid.height - 30, imageWidth, 30);
-
-      if (message) {
-        pctx.fillStyle = 'black';
-        pctx.font = "10px monospace";
-        pctx.fillText(message, 10, polaroid.height - 10);
+      // Draw text input
+      const text = textInput.value.trim();
+      if (text) {
+        ctx.font = "20px Arial";
+        ctx.fillStyle = "#222";
+        ctx.textAlign = "center";
+        ctx.fillText(text, canvas.width/2, canvas.height - 20);
       }
 
+      // Apply filter? Not applying as canvas has no direct CSS filter support
+
+      // Save/download
+      const dataURL = canvas.toDataURL('image/png');
       const link = document.createElement('a');
-      link.download = 'photo-strip.png';
-      link.href = polaroid.toDataURL('image/png');
+      link.download = 'photobooth_image.png';
+      link.href = dataURL;
       link.click();
     }
-  </script>
+  });
+</script>
+
 </body>
 </html>
