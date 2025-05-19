@@ -62,10 +62,6 @@
       margin: 20px 0;
     }
 
-    canvas {
-      display: none;
-    }
-
     #polaroid-container {
       display: none;
       flex-direction: column;
@@ -73,6 +69,20 @@
       padding: 20px;
       height: 100vh;
       overflow-y: auto;
+    }
+
+    #polaroid-wrapper {
+      background: white;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      animation: dropIn 1s ease-out;
+    }
+
+    canvas {
+      display: block;
+      max-width: 100%;
+      height: auto;
     }
 
     @keyframes dropIn {
@@ -86,36 +96,19 @@
       }
     }
 
-    #polaroid-wrapper {
-      background: white;
-      border-radius: 12px;
-      padding: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      animation: dropIn 1s ease-out;
-    }
-
-    #polaroid {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-
-    #text-input {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
+    #message-box {
+      margin-top: 10px;
       width: 90%;
+    }
+
+    #user-message {
+      width: 100%;
+      padding: 8px;
+      border: 1px dashed #b87e7e;
       font-family: 'Press Start 2P', cursive;
       font-size: 10px;
-      text-align: center;
-      border: none;
-      border-top: 1px dashed #999;
-      background: white;
-      padding: 5px 0;
-      color: black;
       resize: none;
-      height: 40px;
+      height: 50px;
     }
 
     .pointer {
@@ -158,13 +151,17 @@
     <video id="video" autoplay playsinline></video>
   </div>
 
-  <canvas id="canvas"></canvas>
+  <canvas id="canvas" style="display:none;"></canvas>
 
   <div id="polaroid-container">
     <div id="polaroid-wrapper">
       <canvas id="polaroid"></canvas>
-      <textarea id="text-input" placeholder="Write something cute..."></textarea>
     </div>
+
+    <div id="message-box">
+      <textarea id="user-message" placeholder="Write something cute here..."></textarea>
+    </div>
+
     <div id="final-buttons">
       <button onclick="downloadImage()">⬇️ Download</button>
       <button onclick="location.reload()">🔄 Restart</button>
@@ -182,7 +179,7 @@
     const instructions = document.getElementById('instructions');
     const videoContainer = document.getElementById('video-container');
     const polaroidContainer = document.getElementById('polaroid-container');
-    const textInput = document.getElementById('text-input');
+    const userMessage = document.getElementById('user-message');
 
     let images = [];
     let imageWidth = 320;
@@ -273,20 +270,23 @@
 
       pctx.fillStyle = 'white';
       pctx.fillRect(0, polaroid.height - 60, imageWidth, 60);
+      pctx.fillStyle = 'black';
+      pctx.font = "10px monospace";
+      pctx.fillText("Write something cute below ↓", 10, polaroid.height - 40);
 
       polaroidContainer.style.display = 'flex';
     }
 
     function downloadImage() {
-      const message = textInput.value.trim();
+      const message = userMessage.value.trim();
 
       pctx.fillStyle = 'white';
-      pctx.fillRect(0, polaroid.height - 60, imageWidth, 60);
+      pctx.fillRect(0, polaroid.height - 30, imageWidth, 30);
 
       if (message) {
         pctx.fillStyle = 'black';
         pctx.font = "10px monospace";
-        pctx.fillText(message, 10, polaroid.height - 20);
+        pctx.fillText(message, 10, polaroid.height - 10);
       }
 
       const link = document.createElement('a');
