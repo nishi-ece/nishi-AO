@@ -12,7 +12,7 @@
       background: url('bg-img.png') no-repeat center center fixed;
       background-size: cover;
       font-family: 'Press Start 2P', cursive;
-      color: white;
+      color: #fecaca;
       text-align: center;
 }
 
@@ -140,7 +140,7 @@
     .pointer {
       font-size: 1.2em;
       margin-left: 8px;
-      animation: bounce 7s infinite;
+      animation: bounce 3s infinite;
     }
 
     @keyframes bounce {
@@ -163,7 +163,7 @@
 
     .blinking-cursor {
       display: inline-block;
-      animation: blink 10s step-end infinite;
+      animation: blink 30s step-end infinite;
     }
 
     @keyframes blink {
@@ -173,11 +173,11 @@
 </head>
 <body>
 
-  <h1>📸 Photobooth by Nishi 💖</h1>
+  <h1>📸 Nishi's Photobooth</h1>
 
   <div id="instructions">
     <ul id="instruction-list"></ul>
-    <button id="start-button" style="display:none;" onclick="startBooth()">📸 Take Picture <span class="pointer">👉</span></button>
+    <button id="start-button" style="display:none;" onclick="startBooth()">📸 Take Picture <span class="pointer"></span></button>
   </div>
 
   <div id="countdown"></div>
