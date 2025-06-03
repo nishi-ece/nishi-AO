@@ -67,6 +67,7 @@
       opacity: 0;
       transition: opacity 0.5s ease-in;
     }
+
     #video-container.show {
       display: flex;
       opacity: 1;
@@ -108,14 +109,9 @@
     }
 
     @keyframes dropIn {
-      0% {
-        transform: translateY(-100%) rotate(-5deg) scale(0.6);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0) rotate(-2deg) scale(0.6);
-        opacity: 1;
-      }
+      0% { transform: translateY(-100%) rotate(-5deg) scale(0.6); opacity: 0; }
+      70% { transform: translateY(10%) scale(0.65) rotate(-2deg); opacity: 1; }
+      100% { transform: translateY(0) scale(0.6) rotate(-2deg); }
     }
 
     #final-controls {
@@ -163,6 +159,15 @@
       font-size: 0.6em;
       color: white;
     }
+
+    .blinking-cursor {
+      display: inline-block;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
   </style>
 </head>
 <body>
@@ -170,12 +175,8 @@
   <h1>📸 Photobooth by Nishi 💖</h1>
 
   <div id="instructions">
-    <ul>
-      <li>Get ready to take 3 photos with countdowns</li>
-      <li>Pose, smile, and style your strip</li>
-      <li>Choose a final filter & download your Polaroid</li>
-    </ul>
-    <button onclick="startBooth()">📸 Take Picture <span class="pointer">👉</span></button>
+    <ul id="instruction-list"></ul>
+    <button id="start-button" style="display:none;" onclick="startBooth()">📸 Take Picture <span class="pointer">👉</span></button>
   </div>
 
   <div id="countdown"></div>
@@ -210,13 +211,54 @@
   </div>
 
   <script>
+    const instructions = [
+      "Get ready to take 3 photos with countdowns",
+      "Pose, smile, and style your strip",
+      "Choose a final filter & download your Polaroid"
+    ];
+
+    const list = document.getElementById("instruction-list");
+    const startButton = document.getElementById("start-button");
+
+    async function typeInstruction(text, parent) {
+      return new Promise(resolve => {
+        const li = document.createElement("li");
+        parent.appendChild(li);
+        let i = 0;
+        const cursor = document.createElement("span");
+        cursor.className = "blinking-cursor";
+        cursor.textContent = "|";
+        li.appendChild(cursor);
+
+        const interval = setInterval(() => {
+          if (i < text.length) {
+            cursor.before(text.charAt(i));
+            i++;
+          } else {
+            clearInterval(interval);
+            cursor.remove();
+            resolve();
+          }
+        }, 30);
+      });
+    }
+
+    async function showInstructions() {
+      for (const line of instructions) {
+        await typeInstruction(line, list);
+        await new Promise(r => setTimeout(r, 400));
+      }
+      startButton.style.display = 'inline-block';
+    }
+
+    showInstructions();
+
     const video = document.getElementById('video');
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
     const polaroid = document.getElementById('polaroid');
     const pctx = polaroid.getContext('2d');
     const countdown = document.getElementById('countdown');
-    const instructions = document.getElementById('instructions');
     const videoContainer = document.getElementById('video-container');
     const polaroidContainer = document.getElementById('polaroid-container');
     const userMessage = document.getElementById('user-message');
@@ -227,8 +269,8 @@
     let imageHeight = 240;
 
     async function startBooth() {
-      instructions.style.display = 'none';
-      videoContainer.style.display = 'flex';
+      document.getElementById('instructions').style.display = 'none';
+      videoContainer.classList.add('show');
 
       try {
         const stream = await navigator.mediaDevices.getUserMedia({
@@ -253,7 +295,7 @@
 
     function takePicture(index) {
       let count = 3;
-      countdown.innerText = count;
+      countdown.innerHTML = `<span class="count">${count}</span>`;
 
       const countdownInterval = setInterval(() => {
         count--;
@@ -274,11 +316,11 @@
           } else {
             video.srcObject.getTracks().forEach(track => track.stop());
             videoContainer.style.display = 'none';
-            renderPolaroidStrip('normal'); // Default
+            renderPolaroidStrip('normal');
             polaroidContainer.style.display = 'flex';
           }
         } else {
-          countdown.innerText = count;
+          countdown.innerHTML = `<span class="count">${count}</span>`;
         }
       }, 1000);
     }
