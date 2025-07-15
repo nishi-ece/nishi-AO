@@ -4,38 +4,47 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nishi Sheeba | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="logo">Nishi Sheeba</div>
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="bg-pink-50 text-gray-900 font-sans leading-relaxed">
+  <div class="max-w-4xl mx-auto px-6 py-12">
 
-  <main class="content slide-up">
-    <h1>About Me</h1>
-    <p>Hi, I'm <strong>Nishi Sheeba</strong>, a Middleware and Automation Engineer with 3+ years of experience in Ansible and Oracle WebLogic.</p>
-    <p>I thrive on building automated solutions, improving system efficiency, and driving innovation at TCS. Let’s build something awesome together!</p>
-  </main>
+    <!-- Header -->
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-2">Nishi Sheeba</h1>
+      <p class="text-lg text-gray-700">Automation & Middleware Engineer | DevOps Enthusiast</p>
+      <p class="text-sm mt-2">Vancouver, BC | <a class="text-blue-600 underline" href="mailto:nishisheeba196@gmail.com">nishisheeba196@gmail.com</a></p>
+      <a href="https://www.linkedin.com/in/nishi-sheeba-89243b18b" target="_blank" class="text-blue-500 underline text-sm">LinkedIn Profile</a>
+    </header>
 
-  <!-- Chatbot UI -->
-  <button id="chatToggle" title="Chat with me!">💬</button>
-  <div id="chatbot" class="hidden">
-    <div id="chatbox">
-      <div id="messages"></div>
-      <div class="input-row">
-        <input type="text" id="userInput" placeholder="Ask me something..." />
-        <button id="sendBtn">&#10148;</button>
-      </div>
-    </div>
+    <!-- About / Objective -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">About Me</h2>
+      <p>
+        I’m an automation engineer with 3+ years of experience in middleware services and infrastructure automation using Ansible. 
+        I build scalable automation pipelines to reduce manual effort, accelerate deployments, and ensure system reliability. 
+        Currently based in Vancouver and open to new opportunities.
+      </p>
+    </section>
+
+    <!-- Resume Download -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">Resume</h2>
+      <p class="mb-4">You can download my full resume here:</p>
+      <a href="./NishiSheeba-resume-new.pdf" download class="inline-block bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
+        📄 Download Resume
+      </a>
+    </section>
+
+    <!-- Contact Me -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-3">Contact Me</h2>
+      <p class="mb-4">Have an opportunity or want to connect? Just click below:</p>
+      <a href="mailto:nishisheeba196@gmail.com" class="inline-block bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition">
+        ✉️ Send Email
+      </a>
+    </section>
+
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>

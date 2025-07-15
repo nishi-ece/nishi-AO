@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nishi Sheeba | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Nishi Sheeba</div>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content slide-up">
+    <h1>About Me</h1>
+    <p>Hi, I'm <strong>Nishi Sheeba</strong>, a Middleware and Automation Engineer with 3+ years of experience in Ansible and Oracle WebLogic.</p>
+    <p>I thrive on building automated solutions, improving system efficiency, and driving innovation at TCS. Let’s build something awesome together!</p>
+  </main>
+
+  <!-- Chatbot UI -->
+  <button id="chatToggle" title="Chat with me!">💬</button>
+  <div id="chatbot" class="hidden">
+    <div id="chatbox">
+      <div id="messages"></div>
+      <div class="input-row">
+        <input type="text" id="userInput" placeholder="Ask me something..." />
+        <button id="sendBtn">&#10148;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

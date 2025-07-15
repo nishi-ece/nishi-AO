@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<<<<<<< HEAD
   <title>Nishi Sheeba | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -51,3 +52,385 @@
     <script src="script.js"></script>
 </body>
 </html>
+=======
+  <title>Nishi's Photobooth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #f1e1e1; /* Light pink background */
+      background-size: cover;
+      font-family: 'Press Start 2P', cursive;
+      color: #f9b5b5;
+      text-align: center;
+}
+
+    h1 {
+      margin-top: 100px;
+      font-size: 2rem;
+    }
+
+    #instructions {
+      padding: 30px;
+      min-height: 100px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    ul li::before {
+      content: "🪩 ";
+    }
+
+    button {
+      background-color: #b87e7e;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 0.7em;
+      margin: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    button:hover {
+      background-color: #a16c6c;
+    }
+
+    select {
+      padding: 8px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.6em;
+      margin-top: 10px;
+    }
+
+    #video-container {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+    }
+
+    #video-container.show {
+      display: flex;
+      opacity: 1;
+    }
+
+    #video {
+      transform: scaleX(-1);
+      width: 90%;
+      max-width: 360px;
+      border-radius: 10px;
+    }
+
+    #countdown {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+
+    #polaroid-container {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    #polaroid-wrapper {
+      background: white;
+      border-radius: 12px;
+      padding: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+      animation: dropIn 1s ease-out;
+      transform: scale(0.6) rotate(-2deg);
+      max-width: 90%;
+    }
+
+    canvas {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @keyframes dropIn {
+      0% { transform: translateY(-100%) rotate(-5deg) scale(0.6); opacity: 0; }
+      70% { transform: translateY(10%) scale(0.65) rotate(-2deg); opacity: 1; }
+      100% { transform: translateY(0) scale(0.6) rotate(-2deg); }
+    }
+
+    #final-controls {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #filter-final {
+      margin-bottom: 10px;
+    }
+
+    #user-message {
+      width: 90%;
+      padding: 8px;
+      border: 1px dashed #b87e7e;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      resize: none;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .pointer {
+      font-size: 1.2em;
+      margin-left: 8px;
+      animation: bounce 3s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.6em;
+      color: white;
+    }
+
+    .blinking-cursor {
+      display: inline-block;
+      animation: blink 30s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Nishi's Photobooth</h1>
+
+  <div id="instructions">
+    <ul id="instruction-list"></ul>
+    <button id="start-button" style="display:none;" onclick="startBooth()">📸 Take Picture <span class="pointer"></span></button>
+  </div>
+
+  <div id="countdown"></div>
+
+  <div id="video-container">
+    <video id="video" autoplay playsinline></video>
+  </div>
+
+  <canvas id="canvas" style="display:none;"></canvas>
+
+  <div id="polaroid-container">
+    <div id="polaroid-wrapper">
+      <canvas id="polaroid"></canvas>
+    </div>
+
+    <div id="final-controls">
+      <select id="filter-final" onchange="reapplyFilter()">
+        <option value="normal">Normal</option>
+        <option value="sepia">Sepia</option>
+        <option value="bw">Black & White</option>
+      </select>
+
+      <textarea id="user-message" placeholder="Write something cute here..."></textarea>
+
+      <div class="button-group">
+        <button onclick="downloadImage()">⬇️ Download</button>
+        <button onclick="location.reload()">🔄 Restart</button>
+      </div>
+    </div>
+
+    <footer>© Nishi Sheeba</footer>
+  </div>
+
+  <script>
+    const instructions = [
+      "Get ready to take 3 photos with countdowns",
+      
+      "Pose, smile, and style your strip",
+      
+      "Choose a final filter & download your Polaroid"
+    ];
+
+    const list = document.getElementById("instruction-list");
+    const startButton = document.getElementById("start-button");
+
+    async function typeInstruction(text, parent) {
+      return new Promise(resolve => {
+        const li = document.createElement("li");
+        parent.appendChild(li);
+        let i = 0;
+        const cursor = document.createElement("span");
+        cursor.className = "blinking-cursor";
+        cursor.textContent = "|";
+        li.appendChild(cursor);
+
+        const interval = setInterval(() => {
+          if (i < text.length) {
+            cursor.before(text.charAt(i));
+            i++;
+          } else {
+            clearInterval(interval);
+            cursor.remove();
+            resolve();
+          }
+        }, 30);
+      });
+    }
+
+    async function showInstructions() {
+      for (const line of instructions) {
+        await typeInstruction(line, list);
+        await new Promise(r => setTimeout(r, 400));
+      }
+      startButton.style.display = 'inline-block';
+    }
+
+    showInstructions();
+
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const polaroid = document.getElementById('polaroid');
+    const pctx = polaroid.getContext('2d');
+    const countdown = document.getElementById('countdown');
+    const videoContainer = document.getElementById('video-container');
+    const polaroidContainer = document.getElementById('polaroid-container');
+    const userMessage = document.getElementById('user-message');
+    const finalFilter = document.getElementById('filter-final');
+
+    let images = [];
+    let imageWidth = 320;
+    let imageHeight = 240;
+
+    async function startBooth() {
+      document.getElementById('instructions').style.display = 'none';
+      videoContainer.classList.add('show');
+
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: "user", width: { ideal: 640 }, height: { ideal: 480 } }
+        });
+
+        video.srcObject = stream;
+
+        video.onloadedmetadata = () => {
+          imageWidth = video.videoWidth;
+          imageHeight = video.videoHeight;
+          canvas.width = imageWidth;
+          canvas.height = imageHeight;
+          polaroid.width = imageWidth;
+          polaroid.height = (imageHeight + 20) * 3 + 60;
+          setTimeout(() => takePicture(0), 1000);
+        };
+      } catch (err) {
+        alert("Unable to access camera.");
+      }
+    }
+
+    function takePicture(index) {
+      let count = 3;
+      countdown.innerHTML = `<span class="count">${count}</span>`;
+
+      const countdownInterval = setInterval(() => {
+        count--;
+        if (count === 0) {
+          clearInterval(countdownInterval);
+          countdown.innerText = '';
+
+          ctx.save();
+          ctx.scale(-1, 1);
+          ctx.drawImage(video, -imageWidth, 0, imageWidth, imageHeight);
+          ctx.restore();
+
+          let imageData = ctx.getImageData(0, 0, imageWidth, imageHeight);
+          images.push(imageData);
+
+          if (index < 2) {
+            setTimeout(() => takePicture(index + 1), 1000);
+          } else {
+            video.srcObject.getTracks().forEach(track => track.stop());
+            videoContainer.style.display = 'none';
+            renderPolaroidStrip('normal');
+            polaroidContainer.style.display = 'flex';
+          }
+        } else {
+          countdown.innerHTML = `<span class="count">${count}</span>`;
+        }
+      }, 1000);
+    }
+
+    function applyFilter(data, filter) {
+      for (let i = 0; i < data.length; i += 4) {
+        let r = data[i], g = data[i + 1], b = data[i + 2];
+        if (filter === 'bw') {
+          const avg = (r + g + b) / 3;
+          data[i] = data[i+1] = data[i+2] = avg;
+        } else if (filter === 'sepia') {
+          data[i]     = (r * .393) + (g * .769) + (b * .189);
+          data[i + 1] = (r * .349) + (g * .686) + (b * .168);
+          data[i + 2] = (r * .272) + (g * .534) + (b * .131);
+        }
+      }
+    }
+
+    function renderPolaroidStrip(filter) {
+      pctx.clearRect(0, 0, polaroid.width, polaroid.height);
+      const now = new Date();
+      const timestamp = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+
+      images.forEach((img, i) => {
+        let copy = new ImageData(new Uint8ClampedArray(img.data), img.width, img.height);
+        applyFilter(copy.data, filter);
+        const y = i * (imageHeight + 20);
+        pctx.putImageData(copy, 0, y);
+        pctx.fillStyle = 'white';
+        pctx.fillRect(0, y + imageHeight, imageWidth, 20);
+        pctx.fillStyle = 'black';
+        pctx.font = "12px monospace";
+        pctx.fillText(timestamp, 10, y + imageHeight + 15);
+      });
+    }
+
+    function reapplyFilter() {
+      renderPolaroidStrip(finalFilter.value);
+    }
+
+    function downloadImage() {
+      const message = userMessage.value.trim();
+      pctx.fillStyle = 'white';
+      pctx.fillRect(0, polaroid.height - 30, imageWidth, 30);
+
+      if (message) {
+        pctx.fillStyle = 'black';
+        pctx.font = "10px monospace";
+        pctx.fillText(message, 10, polaroid.height - 10);
+      }
+
+      const link = document.createElement('a');
+      link.download = 'photo-strip.png';
+      link.href = polaroid.toDataURL('image/png');
+      link.click();
+    }
+  </script>
+</body>
+</html>
+>>>>>>> 510ddc1 (portfolio)
