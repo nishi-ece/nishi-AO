@@ -1,50 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nishi Sheeba | Portfolio</title>
+  <title>Nishi Sheeba | About</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-pink-50 text-gray-900 font-sans leading-relaxed">
-  <div class="max-w-4xl mx-auto px-6 py-12">
+  <!-- Navbar -->
+  <nav class="bg-white shadow mb-8">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="font-bold text-xl">Nishi Sheeba</h1>
+      <div class="space-x-6">
+        <a href="index.html" class="text-blue-600 font-medium">About</a>
+        <a href="resume.html" class="hover:text-blue-600">Resume</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Header -->
-    <header class="text-center mb-12">
-      <h1 class="text-4xl font-bold mb-2">Nishi Sheeba</h1>
-      <p class="text-lg text-gray-700">Automation & Middleware Engineer | DevOps </p>
-      <p class="text-sm mt-2">Vancouver, BC | <a class="text-blue-600 underline" href="mailto:nishisheeba196@gmail.com">nishisheeba196@gmail.com</a></p>
-      <a href="https://www.linkedin.com/in/nishi-sheeba-89243b18b" target="_blank" class="text-blue-500 underline text-sm">LinkedIn Profile</a>
-    </header>
-
-    <!-- About / Objective -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold mb-3">About Me</h2>
-      <p>
-        I’m an middleware engineer with 3+ years of experience in middleware services and infrastructure automation using Ansible. 
-        I build scalable automation pipelines to reduce manual effort, accelerate deployments, and ensure system reliability. 
-        Currently based in Vancouver and open to new opportunities.
-      </p>
-    </section>
-
-    <!-- Resume Download -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold mb-3">Resume</h2>
-      <p class="mb-4">You can download my full resume here:</p>
-      <a href="./NishiSheeba-resume-new.pdf" download class="inline-block bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
-        📄 Download Resume
-      </a>
-    </section>
-
-    <!-- Contact Me -->
-    <section>
-      <h2 class="text-2xl font-semibold mb-3">Contact Me</h2>
-      <p class="mb-4">Have an opportunity or want to connect? Just click below:</p>
-      <a href="mailto:nishisheeba196@gmail.com" class="inline-block bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition">
-        ✉️ Send Email
-      </a>
-    </section>
-
-  </div>
+  <!-- About Section -->
+  <main class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+    <p class="text-lg leading-relaxed">
+      Hi, I’m <strong>Nishi Sheeba</strong>, a Middleware & Automation Engineer with 3+ years 
+      of experience in middleware services and infrastructure automation using Ansible. 
+      I build scalable automation pipelines to reduce manual effort, accelerate deployments, 
+      and ensure system reliability. Currently based in Vancouver, BC, and open to new opportunities.
+    </p>
+    <p class="mt-4 text-lg">
+      I’m expanding my expertise in <span class="font-medium">Azure</span>, 
+      <span class="font-medium">AWS</span>, and containerization platforms to grow as a DevOps Engineer.
+    </p>
+  </main>
 </body>
 </html>

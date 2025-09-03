@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Nishi Sheeba | Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <nav>
-      <div class="logo">Nishi Sheeba</div>
-      <ul>
-        <li><a href="index.html">About</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="content slide-up">
-    <h1>Contact Me</h1>
-    <p>Email: <a href="mailto:nishisheeba196@gmail.com">nishisheeba196@gmail.com</a></p>
-    <p>Phone: +91 7904648915</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/nishi-sheeba-89243b18b" target="_blank">nishi-sheeba-89243b18b</a></p>
-  </main>
-
-  <!-- Chatbot -->
-  <button id="chatToggle" title="Chat with me!">💬</button>
-  <div id="chatbot" class="hidden">
-    <div id="chatbox">
-      <div id="messages"></div>
-      <div class="input-row">
-        <input type="text" id="userInput" placeholder="Ask me something..." />
-        <button id="sendBtn">&#10148;</button>
+<body class="bg-pink-50 text-gray-900 font-sans leading-relaxed">
+  <!-- Navbar -->
+  <nav class="bg-white shadow mb-8">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="font-bold text-xl">Nishi Sheeba</h1>
+      <div class="space-x-6">
+        <a href="index.html" class="hover:text-blue-600">About</a>
+        <a href="resume.html" class="hover:text-blue-600">Resume</a>
+        <a href="contact.html" class="text-blue-600 font-medium">Contact</a>
       </div>
     </div>
-  </div>
+  </nav>
 
-  <script src="script.js"></script>
+  <!-- Contact Section -->
+  <main class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-semibold mb-4">Contact Me</h2>
+    <p class="mb-6 text-lg">Have an opportunity or want to connect? Reach me here:</p>
+
+    <div class="space-y-4">
+      <a href="mailto:nishisheeba196@gmail.com" 
+         class="block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition w-max mx-auto">
+         ✉️ Email Me
+      </a>
+      <a href="https://www.linkedin.com/in/nishi-sheeba-89243b18b" target="_blank" 
+         class="block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition w-max mx-auto">
+         🔗 LinkedIn Profile
+      </a>
+    </div>
+  </main>
 </body>
 </html>

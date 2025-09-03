@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nishi Sheeba | Resume</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-pink-50 text-gray-900 font-sans leading-relaxed">
+  <!-- Navbar -->
+  <nav class="bg-white shadow mb-8">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="font-bold text-xl">Nishi Sheeba</h1>
+      <div class="space-x-6">
+        <a href="index.html" class="hover:text-blue-600">About</a>
+        <a href="resume.html" class="text-blue-600 font-medium">Resume</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Resume Section -->
+  <main class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-semibold mb-4">My Resume</h2>
+    <p class="mb-6 text-lg">You can preview or download my resume below:</p>
+
+    <!-- Buttons -->
+    <div class="space-x-4 mb-6">
+      <a href="NishiSheeba-resume-new.pdf" target="_blank" 
+         class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">👁 View Resume</a>
+      <a href="NishiSheeba-resume-new.pdf" download 
+         class="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition">📄 Download Resume</a>
+    </div>
+
+    <!-- Resume Preview -->
+    <div class="shadow-lg border rounded-lg overflow-hidden">
+      <iframe src="NishiSheeba-resume-new.pdf" class="w-full h-[600px]" frameborder="0"></iframe>
+    </div>
+  </main>
+</body>
+</html>

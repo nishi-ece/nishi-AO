@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nishi Sheeba | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-pink-50 text-gray-900 font-sans leading-relaxed">
+  <div class="max-w-4xl mx-auto px-6 py-12">
+
+    <!-- Header -->
+    <header class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-2">Nishi Sheeba</h1>
+      <p class="text-lg text-gray-700">Automation & Middleware Engineer | DevOps </p>
+      <p class="text-sm mt-2">Vancouver, BC | <a class="text-blue-600 underline" href="mailto:nishisheeba196@gmail.com">nishisheeba196@gmail.com</a></p>
+      <a href="https://www.linkedin.com/in/nishi-sheeba-89243b18b" target="_blank" class="text-blue-500 underline text-sm">LinkedIn Profile</a>
+    </header>
+
+    <!-- About / Objective -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">About Me</h2>
+      <p>
+        I’m an middleware engineer with 3+ years of experience in middleware services and infrastructure automation using Ansible. 
+        I build scalable automation pipelines to reduce manual effort, accelerate deployments, and ensure system reliability. 
+        Currently based in Vancouver and open to new opportunities.
+      </p>
+    </section>
+
+    <!-- Resume Download -->
+    <section class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">Resume</h2>
+      <p class="mb-4">You can download my full resume here:</p>
+      <a href="./NishiSheeba-resume-new.pdf" download class="inline-block bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
+        📄 Download Resume
+      </a>
+    </section>
+
+    <!-- Contact Me -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-3">Contact Me</h2>
+      <p class="mb-4">Have an opportunity or want to connect? Just click below:</p>
+      <a href="mailto:nishisheeba196@gmail.com" class="inline-block bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition">
+        ✉️ Send Email
+      </a>
+    </section>
+
+  </div>
+</body>
+</html>
