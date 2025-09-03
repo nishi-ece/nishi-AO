@@ -34,8 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
       let response = "Hmm... Try asking about experience, skills, or hobbies!";
       if (msg.includes("name")) response = "I'm Nishi's assistant. 😊";
       else if (msg.includes("experience")) response = "3+ years at TCS with Middleware and Automation.";
-      else if (msg.includes("skills")) response = "Ansible, Docker, WebLogic, Jenkins, GitHub, etc.";
-      else if (msg.includes("contact")) response = "Email: nishisheeba196@gmail.com";
+      else if (msg.includes("skills")) response = "Ansible, Docker, WebLogic, Jenkins, GitHub, Linux, Shell Scripting, Python";
+      else if (msg.includes("contact")) response = "You can either get it through contact page or Email: nishisheeba196@gmail.com";
+      else if (msg.includes("number")) response = "You can either get it through contact page or phone number: +1 (778) 522-3109 ";
       else if (msg.includes("hobbies")) response = "Art, music, literature 🎨🎶📚";
       else if (msg.includes("hello") || msg.includes("hi")) response = "Hey there! 👋";
   
