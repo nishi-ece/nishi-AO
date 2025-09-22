@@ -199,9 +199,6 @@
         <option value="sepia">Sepia</option>
         <option value="bw">Black & White</option>
       </select>
-
-      <textarea id="user-message" placeholder="Write something cute here..."></textarea>
-
       <div class="button-group">
         <button onclick="downloadImage()">⬇️ Download</button>
         <button onclick="location.reload()">🔄 Restart</button>
@@ -249,7 +246,7 @@
     async function showInstructions() {
       for (const line of instructions) {
         await typeInstruction(line, list);
-        await new Promise(r => setTimeout(r, 400));
+        await new Promise(r => setTimeout(r, 800));
       }
       startButton.style.display = 'inline-block';
     }
