@@ -19,6 +19,8 @@ h1{font-family:Fraunces,Georgia,serif;font-style:italic;font-weight:800;font-siz
 .screen{position:relative;aspect-ratio:4/3;background:#111;overflow:hidden;border-radius:2px}
 video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1);display:block}
 .vig,.tint{position:absolute;inset:0;pointer-events:none}
+.grain{position:absolute;inset:0;pointer-events:none;mix-blend-mode:overlay}
+#off{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#1a1a1a}
 #count{position:absolute;inset:0;display:none;align-items:center;justify-content:center;font:800 italic 9rem Fraunces,serif;color:#fff;text-shadow:0 4px 20px #000}
 #flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
 #flash.go{animation:fl .5s}
@@ -48,7 +50,9 @@ video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1);display:block
   <video id="v" autoplay playsinline muted></video>
   <div class="tint" id="tint"></div>
   <div class="vig" id="vig"></div>
+  <div class="grain" id="grain"></div>
   <div id="count"></div><div id="flash"></div>
+  <div id="off"><button class="btn main" id="camon">Turn on camera</button></div>
   <div id="msg"></div>
  </div>
  <div class="row modes" id="modes">
@@ -56,7 +60,7 @@ video{width:100%;height:100%;object-fit:cover;transform:scaleX(-1);display:block
   <button class="chip" data-m="strip" aria-pressed="false">Photo strip of 4</button>
  </div>
  <div class="row" id="filters"></div>
- <div class="row"><button class="btn main" id="snap">📸 Take picture</button></div>
+ <div class="row"><button class="btn main" id="snap">📸 Take picture</button><button class="btn" id="camtoggle">Turn camera on</button></div>
 </main>
 
 <section id="out" aria-live="polite">
@@ -77,7 +81,8 @@ const FILTERS={
  gold:{n:"Kodak Gold",css:"sepia(.25) saturate(1.55) contrast(1.05) brightness(1.05)",tint:"rgba(255,165,50,.14)",vig:.35,grain:.08},
  rose:{n:"Rosé",css:"saturate(1.15) contrast(.92) brightness(1.1) hue-rotate(-14deg)",tint:"rgba(255,150,170,.18)",vig:.25},
  cyan:{n:"Cyanotype",css:"grayscale(1) sepia(1) hue-rotate(180deg) saturate(2.6) contrast(1.1)",vig:.4,grain:.08},
- lomo:{n:"Lomo",css:"saturate(1.7) contrast(1.35)",vig:.85,grain:.1}
+ lomo:{n:"Lomo",css:"saturate(1.7) contrast(1.35)",vig:.85,grain:.1},
+ booth:{n:"Old Booth",css:"sepia(1) contrast(.92) brightness(1.06) saturate(.85) blur(1.6px)",tint:"rgba(110,70,30,.2)",vig:.6,grain:.4}
 };
 const $=id=>document.getElementById(id);
 const v=$("v");let cur="normal",mode="single",raws=[],busy=false;
@@ -89,14 +94,29 @@ $("filters").onclick=e=>{const k=e.target.dataset.k;if(!k)return;cur=k;
 $("modes").onclick=e=>{const m=e.target.dataset.m;if(!m)return;mode=m;
  [...$("modes").children].forEach(c=>c.setAttribute("aria-pressed",c.dataset.m===m))};
 
+const NURL=(()=>{const c=document.createElement("canvas");c.width=c.height=128;const g=c.getContext("2d"),d=g.createImageData(128,128);
+ for(let i=0;i<d.data.length;i+=4){const x=Math.random()*255;d.data[i]=d.data[i+1]=d.data[i+2]=x;d.data[i+3]=255}g.putImageData(d,0,0);return c.toDataURL()})();
 function preview(){const f=FILTERS[cur];v.style.filter=f.css;
+ $("grain").style.cssText=f.grain?`background-image:url(${NURL});opacity:${Math.min(1,f.grain*2.5)}`:"background:none";
  $("tint").style.background=f.tint||"none";
  $("vig").style.background=f.vig?`radial-gradient(ellipse at center,transparent 45%,rgba(0,0,0,${f.vig}) 100%)`:"none"}
 
 // camera
-(async()=>{try{
- v.srcObject=await navigator.mediaDevices.getUserMedia({video:{facingMode:"user",width:{ideal:1280}},audio:false});
-}catch(e){const m=$("msg");m.style.display="flex";m.textContent="Camera access is blocked. Allow the camera in your browser settings, then reload the page."}})();
+let stream=null;
+const camUI=()=>{$("camtoggle").textContent=stream?"Turn camera off":"Turn camera on"};
+async function camOn(){
+ if(stream)return true;
+ try{
+  const s=await navigator.mediaDevices.getUserMedia({video:{facingMode:"user",width:{ideal:1280}},audio:false});
+  const ready=new Promise(r=>v.onloadedmetadata=r);
+  stream=s;v.srcObject=s;await ready;await v.play().catch(()=>{});
+  $("off").style.display="none";$("msg").style.display="none";camUI();return true;
+ }catch(e){const m=$("msg");m.style.display="flex";m.textContent="Camera access is blocked. Allow the camera in your browser settings, then try again.";return false}}
+function camOff(){
+ if(stream){stream.getTracks().forEach(t=>t.stop());stream=null}
+ v.srcObject=null;$("off").style.display="flex";camUI()}
+const toggleCam=()=>{if(!busy)stream?camOff():camOn()};
+$("camon").onclick=$("camtoggle").onclick=toggleCam;
 preview();
 
 // capture
@@ -104,12 +124,14 @@ const wait=ms=>new Promise(r=>setTimeout(r,ms));
 async function shoot(){const c=document.createElement("canvas");c.width=v.videoWidth;c.height=v.videoHeight;c.getContext("2d").drawImage(v,0,0);
  $("flash").classList.remove("go");void $("flash").offsetWidth;$("flash").classList.add("go");return c}
 $("snap").onclick=async()=>{
- if(busy||!v.videoWidth)return;busy=true;$("snap").disabled=true;raws=[];$("out").style.display="none";
+ if(busy)return;busy=true;$("snap").disabled=true;
+ if(!await camOn()){busy=false;$("snap").disabled=false;return}
+ raws=[];$("out").style.display="none";await wait(400);
  const n=mode==="strip"?4:1,cn=$("count");
  for(let i=0;i<n;i++){cn.style.display="flex";
   for(let s=3;s>0;s--){cn.textContent=s;await wait(800)}
   cn.style.display="none";raws.push(await shoot());await wait(500)}
- busy=false;$("snap").disabled=false;render();
+ camOff();busy=false;$("snap").disabled=false;render();
  $("out").style.display="block";$("out").scrollIntoView({behavior:"smooth"})};
 
 // render result
